@@ -23,6 +23,7 @@
   <project path="device/common" name="CyanogenMod/android_device_common" />
   <project path="device/htc/common" name="CyanogenMod/android_device_htc_common" />
   <project path="device/htc/leo" name="cmhtcleo/android_device_htc_leo" />
+  <project path="device/lenovo/A1_07" name="gmarkall/android_device_ideapad_a1" />
   <project path="external/alsa-lib" name="CyanogenMod/android_external_alsa-lib" />
   <project path="external/alsa-utils" name="CyanogenMod/android_external_alsa-utils" />
   <project path="external/apache-http" name="CyanogenMod/android_external_apache-http" />
@@ -218,7 +219,8 @@
   <project path="system/wlan/ti" name="CyanogenMod/android_system_wlan_ti" />
 
   <project path="vendor/htc/leo" name="cmhtcleo/android_vendor_htc_leo" />
-  <project path="vendor/cyanogen" name="CyanogenMod/android_vendor_cyanogen" />
+  <project path="vendor/lenovo/A1_07" name="gmarkall/android_vendor_lenovo_a1_07" />
+  <project path="vendor/cyanogen" name="gmarkall/android_vendor_cyanogen" />
   <project path="vendor/qcom/opensource/webkit" name="CyanogenMod/android_vendor_qcom_opensource_webkit" />
   <project path="vendor/tmobile/apps/ThemeChooser" name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" />
   <project path="vendor/tmobile/libs/com.tmobile.themes" name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes" />
