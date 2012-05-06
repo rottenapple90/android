@@ -175,7 +175,7 @@
   <project path="hardware/qcom/display" name="Evervolv/android_hardware_qcom_display" />
   <project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" />
   <project path="hardware/qcom/media" name="Evervolv/android_hardware_qcom_media" />
-  <project path="hardware/qcom/camera" name="rapmv78/android_hardware_qcom_camerahal" revision="master" />
+  <project path="hardware/qcom/camera" name="cmhtcleo/android_hardware_qcom_camerahal" revision="master" />
   <project path="hardware/ril" name="CyanogenMod/android_hardware_ril" />
   <project path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" />
   <project path="hardware/ti/omap3" name="CyanogenMod/android_hardware_ti_omap3" />
