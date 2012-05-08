@@ -26,6 +26,7 @@
   <project path="device/generic/goldfish" name="device/generic/goldfish" remote="aosp" revision="refs/tags/android-4.0.4_r1.2" />
   <project path="device/htc/common" name="ics-passion-dev/android_device_htc_common" revision="ics-starter" />
   <project path="device/htc/leo" name="cmhtcleo/android_device_htc_leo" revision="ics" />
+  <project path="device/lenovo/A1_07" name="gmarkall/android_device_ideapad_a1" />
   <project path="external/android-mock" name="platform/external/android-mock" remote="aosp" revision="refs/tags/android-4.0.4_r1.2" />
   <project path="external/antlr" name="platform/external/antlr" remote="aosp" revision="refs/tags/android-4.0.4_r1.2" />
   <project path="external/apache-harmony" name="platform/external/apache-harmony" remote="aosp" revision="refs/tags/android-4.0.4_r1.2" />
@@ -262,6 +263,7 @@
   <project path="system/vold" name="CyanogenMod/android_system_vold" />
 
   <project path="vendor/htc/leo" name="cmhtcleo/android_vendor_htc_leo" revision="ics" />
+  <project path="vendor/lenovo/A1_07" name="gmarkall/android_vendor_lenovo_a1_07" />
 
   <project path="android" name="milaq/android" />
 </manifest>
