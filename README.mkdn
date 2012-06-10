@@ -1,6 +1,7 @@
 Cyanogenmod 9 manifests (milaq)
 ================================
 
-DISCLAIMER: Please use 'CyanogenMod/android.git' to init the repos instead.
+DISCLAIMER: Please use 'CyanogenMod/android.git' to init the repos.
 
-Here only resides the local manifest since ICS
+then pull the local manifest to .repo/local_manifest.xml and repo sync
+(for leo use local_manifest_htc_leo.xml > .repo/local_manifest.xml)
