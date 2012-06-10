@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <manifest>
+
+    <project path="build"
+      name="gmarkall/android_build"
+      remote="github"
+      revision="gingerbread"/>
+
+    <project path="device/htc/leo"
+      name="cmhtcleo/android_device_htc_leo"
+      remote="github"
+      revision="gingerbread"/>
+
+    <project path="device/lenovo/A1_07"
+      name="gmarkall/android_device_ideapad_a1"
+      remote="github"
+      revision="gingerbread"/>
+
+    <project path="vendor/cyanogen"
+      name="gmarkall/android_vendor_cyanogen"
+      remote="github"
+      revision="gingerbread"/>
+
+    <project path="vendor/htc/leo"
+      name="cmhtcleo/android_vendor_htc_leo"
+      remote="github"
+      revision="gingerbread"/>
+
+    <project path="vendor/lenovo/A1_07"
+      name="gmarkall/android_vendor_lenovo_a1_07"
+      remote="github"
+      revision="gingerbread"/>
+
+  </manifest>
