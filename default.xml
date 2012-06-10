@@ -25,8 +25,11 @@
   <project path="device/common" name="device/common" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="device/generic/goldfish" name="device/generic/goldfish" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="device/htc/common" name="ics-passion-dev/android_device_htc_common" revision="ics-starter" />
-  <project path="device/htc/leo" name="cmhtcleo/android_device_htc_leo" revision="ics" />
+  <project path="device/htc/leo" name="cmhtcleo/android_device_htc_leo" />
   <project path="device/lenovo/A1_07" name="gmarkall/android_device_ideapad_a1" />
+  <project path="device/samsung/maguro" name="CyanogenMod/android_device_samsung_maguro" />
+  <project path="device/samsung/tuna" name="CyanogenMod/android_device_samsung_tuna" />
+  <project path="device/ti/panda" name="device/ti/panda" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="external/android-mock" name="platform/external/android-mock" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="external/antlr" name="platform/external/antlr" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="external/apache-harmony" name="platform/external/apache-harmony" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
