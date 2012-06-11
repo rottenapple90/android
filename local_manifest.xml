@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <manifest>
 
+    <remove-project name="CyanogenMod/android_build"/>
     <project path="build"
       name="gmarkall/android_build"
       remote="github"
       revision="gingerbread"/>
 
+    <remove-project name="CyanogenMod/android_device_htc_leo"/>
     <project path="device/htc/leo"
       name="cmhtcleo/android_device_htc_leo"
       remote="github"
@@ -16,6 +18,7 @@
       remote="github"
       revision="gingerbread"/>
 
+    <remove-project name="CyanogenMod/android_vendor_cyanogen"/>
     <project path="vendor/cyanogen"
       name="gmarkall/android_vendor_cyanogen"
       remote="github"
