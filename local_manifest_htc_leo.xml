@@ -11,12 +11,20 @@
       remote="github"
       revision="ics"/>
 
+	<remove-project name="CyanogenMod/android_hardware_msm7k"/>
     <project path="hardware/msm7k"
       name="Evervolv/android_hardware_msm7k"
       remote="github"
       revision="ics"/>
+ 
+	<remove-project name="CyanogenMod/android_hardware_qcom_display"/>
+    <project path="hardware/qcom/display"
+      name="Evervolv/android_hardware_qcom_display"
+      remote="github"
+      revision="ics"/>
 
-    <project path="hardware/qcom/media"
+    <remove-project name="CyanogenMod/android_hardware_qcom_media"/>
+	<project path="hardware/qcom/media"
       name="Evervolv/android_hardware_qcom_media"
       remote="github"
       revision="ics"/>
@@ -36,11 +44,13 @@
       remote="github"
       revision="ics"/>
 
+	<remove-project name="CyanogenMod/android_vendor_qcom_opensource_omx_mm-core"/>
     <project path="vendor/qcom/opensource/omx/mm-core"
       name="Evervolv/android_vendor_qcom_opensource_omx_mm-core"
       remote="github"
       revision="ics"/>
 
+	<remove-project name="CyanogenMod/android_vendor_qcom_opensource_omx_mm-video"/>
     <project path="vendor/qcom/opensource/omx/mm-video"
       name="Evervolv/android_vendor_qcom_opensource_omx_mm-video"
       remote="github"
