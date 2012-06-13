@@ -6,7 +6,7 @@
       remote="github"
       revision="ics"/>
 
-    <project path="device/lenovo/A107"
+    <project path="device/lenovo/A1_07"
       name="gmarkall/android_device_ideapad_a1"
       remote="github"
       revision="ics"/>
@@ -37,7 +37,7 @@
       revision="ics"/>
 
 
-    <project path="vendor/lenovo/A107"
+    <project path="vendor/lenovo/A1_07"
       name="gmarkall/android_vendor_lenovo_a1_07"
       remote="github"
       revision="ics"/>
