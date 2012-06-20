@@ -45,7 +45,7 @@
       remote="github"
       revision="ics"/>
 
-    <project path="vendor/imgtec/"
+    <project path="vendor/imgtec"
       name="koush/proprietary_vendor_imgtec"
       remote="github"
       revision="ics"/>
