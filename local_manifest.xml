@@ -41,12 +41,12 @@
       revision="ics"/>
 
     <project path="vendor/hp"
-      name="koush/proprietary_vendor_hp"
+      name="TheMuppets/proprietary_vendor_hp"
       remote="github"
       revision="ics"/>
 
     <project path="vendor/imgtec"
-      name="koush/proprietary_vendor_imgtec"
+      name="TheMuppets/proprietary_vendor_imgtec"
       remote="github"
       revision="ics"/>
 
@@ -56,7 +56,7 @@
       revision="ics"/>
 
     <project path="vendor/samsung"
-      name="koush/proprietary_vendor_samsung"
+      name="TheMuppets/proprietary_vendor_samsung"
       remote="github"
       revision="ics"/>
 
