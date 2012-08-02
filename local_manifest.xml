@@ -13,6 +13,11 @@
       name="gmarkall/android_device_ideapad_a1"
       remote="github"
       revision="ics"/>
+      
+    <project path="device/lge/p940"
+      name="milaq/android_device_lge_p940"
+      remote="github"
+      revision="ics"/>
 
     <project path="device/samsung/maguro"
       name="CyanogenMod/android_device_samsung_maguro"
@@ -32,6 +37,11 @@
 
     <project path="kernel/hp/tenderloin"
       name="CyanogenMod/hp-kernel-tenderloin"
+      remote="github"
+      revision="ics"/>
+      
+    <project path="kernel/lg/p940"
+      name="milaq/android_kernel_lge_p940"
       remote="github"
       revision="ics"/>
 
