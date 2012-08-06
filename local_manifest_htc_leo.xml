@@ -2,9 +2,9 @@
   <manifest>
 
     <project path="device/htc/common"
-      name="ics-passion-dev/android_device_htc_common"
+      name="Evervolv/android_device_htc_common"
       remote="github"
-      revision="ics-starter"/>
+      revision="ics"/>
 
     <project path="device/htc/leo"
       name="cmhtcleo/android_device_htc_leo"
