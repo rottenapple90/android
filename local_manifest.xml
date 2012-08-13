@@ -19,16 +19,6 @@
       remote="github"
       revision="ics"/>
 
-    <project path="device/samsung/maguro"
-      name="CyanogenMod/android_device_samsung_maguro"
-      remote="github"
-      revision="ics"/>
-
-    <project path="device/samsung/tuna"
-      name="CyanogenMod/android_device_samsung_tuna"
-      remote="github"
-      revision="ics"/>
-
     <remove-project name="CyanogenMod/android_hardware_ti_omap3"/>
     <project path="hardware/ti/omap3"
       name="platform/hardware/ti/omap3"
@@ -45,28 +35,13 @@
       remote="github"
       revision="ics"/>
 
-    <project path="kernel/samsung/tuna"
-      name="CyanogenMod/android_kernel_samsung_tuna"
-      remote="github"
-      revision="ics"/>
-
     <project path="vendor/hp"
       name="TheMuppets/proprietary_vendor_hp"
       remote="github"
       revision="ics"/>
 
-    <project path="vendor/imgtec"
-      name="TheMuppets/proprietary_vendor_imgtec"
-      remote="github"
-      revision="ics"/>
-
     <project path="vendor/lenovo/a107"
       name="gmarkall/android_vendor_lenovo_a1_07"
-      remote="github"
-      revision="ics"/>
-
-    <project path="vendor/samsung"
-      name="TheMuppets/proprietary_vendor_samsung"
       remote="github"
       revision="ics"/>
 
