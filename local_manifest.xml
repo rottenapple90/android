@@ -44,5 +44,10 @@
       name="gmarkall/android_vendor_lenovo_a1_07"
       remote="github"
       revision="ics"/>
+      
+    <project path="vendor/lge/p940"
+      name="milaq/android_vendor_lge_p940"
+      remote="github"
+      revision="ics"/>
 
   </manifest>
