@@ -21,8 +21,8 @@
 
     <remove-project name="CyanogenMod/android_hardware_ti_omap3"/>
     <project path="hardware/ti/omap3"
-      name="platform/hardware/ti/omap3"
-      remote="oz"
+      name="fat-tire/android_hardware_ti_omap3"
+      remote="github"
       revision="p-ics-mr1"/>
 
     <project path="kernel/hp/tenderloin"
