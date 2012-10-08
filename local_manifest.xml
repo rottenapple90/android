@@ -7,7 +7,6 @@
       remote="github"
       revision="gingerbread"/>
 
-    <remove-project name="CyanogenMod/android_device_htc_leo"/>
     <project path="device/htc/leo"
       name="cmhtcleo/android_device_htc_leo"
       remote="github"
