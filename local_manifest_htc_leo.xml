@@ -19,7 +19,7 @@
  
 	<remove-project name="CyanogenMod/android_hardware_qcom_display"/>
     <project path="hardware/qcom/display"
-      name="Evervolv/android_hardware_qcom_display"
+      name="cmhtcleo/android_hardware_qcom_display"
       remote="github"
       revision="ics"/>
 
