@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <manifest>
 
-    <project path="device/coby/em102"
-      name="milaq/android_device_coby_em102"
-      remote="github"
-      revision="jellybean"/>
-
     <project path="device/lge/p940"
       name="milaq/android_device_lge_p940"
       remote="github"
@@ -15,11 +10,6 @@
       name="milaq/android_kernel_lge_p940"
       remote="github"
       revision="ics"/>
-
-    <project path="vendor/coby/em102"
-      name="milaq/android_vendor_coby_em102"
-      remote="github"
-      revision="jellybean"/>
       
     <project path="vendor/lge/p940"
       name="milaq/android_vendor_lge_p940"
