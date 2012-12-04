@@ -6,7 +6,7 @@
       remote="github"
       revision="jellybean"/>
 
-    <project path="kernel/lg/p940"
+    <project path="kernel/lge/p940"
       name="milaq/android_kernel_lge_p940"
       remote="github"
       revision="ics"/>
