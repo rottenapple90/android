@@ -1,5 +1,7 @@
-Cyanogenmod 10 manifests (milaq)
+Cyanogenmod 10.1 manifests (milaq)
 ================================
+
+Android 4.2 Jellybean
 
 DISCLAIMER: Please use 'CyanogenMod/android.git' to init the repos.
 
