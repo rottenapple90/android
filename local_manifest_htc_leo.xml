@@ -11,20 +11,20 @@
       remote="github"
       revision="ics"/>
 
-	<remove-project name="CyanogenMod/android_hardware_msm7k"/>
+    <remove-project name="CyanogenMod/android_hardware_msm7k"/>
     <project path="hardware/msm7k"
       name="Evervolv/android_hardware_msm7k"
       remote="github"
       revision="ics"/>
- 
-	<remove-project name="CyanogenMod/android_hardware_qcom_display"/>
+
+    <remove-project name="CyanogenMod/android_hardware_qcom_display"/>
     <project path="hardware/qcom/display"
-      name="cmhtcleo/android_hardware_qcom_display"
+      name="Evervolv/android_hardware_qcom_display"
       remote="github"
       revision="ics"/>
 
     <remove-project name="CyanogenMod/android_hardware_qcom_media"/>
-	<project path="hardware/qcom/media"
+    <project path="hardware/qcom/media"
       name="Evervolv/android_hardware_qcom_media"
       remote="github"
       revision="ics"/>
