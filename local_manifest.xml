@@ -5,11 +5,6 @@
       name="milaq/android_device_lge_p940"
       remote="github"
       revision="cm-10.1"/>
-
-    <project path="kernel/lge/p940"
-      name="milaq/android_kernel_lge_p940"
-      remote="github"
-      revision="cm-10.1"/>
       
     <project path="vendor/lge/p940"
       name="milaq/android_vendor_lge_p940"
