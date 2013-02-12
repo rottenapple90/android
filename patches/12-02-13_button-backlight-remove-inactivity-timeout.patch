@@ -1,27 +1,30 @@
-From 4955e136c92018c0978b5a866d2b6081ec0a4634 Mon Sep 17 00:00:00 2001
+From e6605df087a1c35e9a05b38f525751890dd7afd4 Mon Sep 17 00:00:00 2001
 From: milaq <micha.laqua@gmail.com>
-Date: Wed, 30 Jan 2013 20:08:58 +0100
-Subject: [PATCH] button-backlight: remove inactivity timeout
+Date: Tue, 12 Feb 2013 15:48:33 +0100
+Subject: [PATCH 1/1] button-backlight: remove inactivity timeout rebased:
+ included keyboard backlight
 
 ---
- .../android/server/power/PowerManagerService.java  |   15 ++++-----------
- 1 files changed, 4 insertions(+), 11 deletions(-)
+ .../android/server/power/PowerManagerService.java  |   18 +++++-------------
+ 1 files changed, 5 insertions(+), 13 deletions(-)
 
 diff --git a/services/java/com/android/server/power/PowerManagerService.java b/services/java/com/android/server/power/PowerManagerService.java
-index 6604af6..01eb194 100644
+index d4fa948..d090826 100644
 --- a/services/java/com/android/server/power/PowerManagerService.java
 +++ b/services/java/com/android/server/power/PowerManagerService.java
-@@ -1302,17 +1302,10 @@ public final class PowerManagerService extends IPowerManager.Stub
+@@ -1317,19 +1317,11 @@ public final class PowerManagerService extends IPowerManager.Stub
                      nextTimeout = mLastUserActivityTime
                              + screenOffTimeout - screenDimDuration;
                      if (now < nextTimeout) {
 -                        if (now > mLastUserActivityTime + BUTTON_ON_DURATION) {
 -                            mButtonsLight.setBrightness(0);
+-                            mKeyboardLight.setBrightness(0);
 -                        } else {
 -                            int brightness = mButtonBrightnessOverrideFromWindowManager >= 0
 -                                    ? mButtonBrightnessOverrideFromWindowManager
 -                                    : mDisplayPowerRequest.screenBrightness;
 -                            mButtonsLight.setBrightness(brightness);
+-                            mKeyboardLight.setBrightness(mKeyboardVisible ? brightness : 0);
 -                            if (brightness != 0) {
 -                                nextTimeout = now + BUTTON_ON_DURATION;
 -                            }
@@ -30,6 +33,7 @@ index 6604af6..01eb194 100644
 +                                ? mButtonBrightnessOverrideFromWindowManager
 +                                : mDisplayPowerRequest.screenBrightness;
 +                        mButtonsLight.setBrightness(brightness);
++                        mKeyboardLight.setBrightness(mKeyboardVisible ? brightness : 0);
                          mUserActivitySummary |= USER_ACTIVITY_SCREEN_BRIGHT;
                      } else {
                          nextTimeout = mLastUserActivityTime + screenOffTimeout;

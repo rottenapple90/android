@@ -12,7 +12,7 @@
 #
 # button-backlight: remove inactivity timeout
 cd frameworks/base
-wget https://raw.github.com/milaq/android/cm-10.1/patches/30-01-12_button-backlight-remove-inactivity-timeout.patch
-git am 30-01-12_button-backlight-remove-inactivity-timeout.patch
-rm 30-01-12_button-backlight-remove-inactivity-timeout.patch
+wget https://raw.github.com/milaq/android/cm-10.1/patches/12-02-13_button-backlight-remove-inactivity-timeout.patch
+git am 12-02-13_button-backlight-remove-inactivity-timeout.patch
+rm 12-02-13_button-backlight-remove-inactivity-timeout.patch
 cd ../..
