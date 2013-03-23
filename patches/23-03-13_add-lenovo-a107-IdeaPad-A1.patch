@@ -1,0 +1,54 @@
+From 318aede9059f11c41ccd795942ceb071d1ae040d Mon Sep 17 00:00:00 2001
+From: milaq <micha.laqua@gmail.com>
+Date: Sat, 23 Mar 2013 15:05:39 +0100
+Subject: [PATCH] add lenovo a107 (IdeaPad A1)
+
+---
+ products/AndroidProducts.mk |    1 +
+ products/cyanogen_a107.mk   |   24 ++++++++++++++++++++++++
+ 2 files changed, 25 insertions(+), 0 deletions(-)
+ create mode 100644 products/cyanogen_a107.mk
+
+diff --git a/products/AndroidProducts.mk b/products/AndroidProducts.mk
+index d8725a9..bce041c 100644
+--- a/products/AndroidProducts.mk
++++ b/products/AndroidProducts.mk
+@@ -1,4 +1,5 @@
+ PRODUCT_MAKEFILES := \
++    $(LOCAL_DIR)/cyanogen_a107.mk \
+     $(LOCAL_DIR)/cyanogen_ace.mk \
+     $(LOCAL_DIR)/cyanogen_anzu.mk \
+     $(LOCAL_DIR)/cyanogen_blade.mk \
+diff --git a/products/cyanogen_a107.mk b/products/cyanogen_a107.mk
+new file mode 100644
+index 0000000..3cc4fd9
+--- /dev/null
++++ b/products/cyanogen_a107.mk
+@@ -0,0 +1,24 @@
++# Inherit AOSP device configuration for a107.
++$(call inherit-product, device/lenovo/a107/a107.mk)
++
++# Inherit some common cyanogenmod stuff.
++$(call inherit-product, vendor/cyanogen/products/common_full.mk)
++
++#
++# Setup device specific product configuration.
++#
++PRODUCT_NAME := cyanogen_a107
++PRODUCT_BRAND := lenovo
++PRODUCT_DEVICE := a107
++PRODUCT_MODEL := IdeaPad A1
++PRODUCT_MANUFACTURER := Lenovo
++PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=a107 BUILD_ID=GRK393 BUILD_FINGERPRINT=lenovo/a107/a107:2.3.7/GRK393/189913:user/release-keys 
++PRIVATE_BUILD_DESC="a107-user 2.3.7 GRK393 189913 release-keys"
++
++# Release name and versioning
++PRODUCT_RELEASE_NAME := a107
++PRODUCT_VERSION_DEVICE_SPECIFIC :=
++-include vendor/cyanogen/products/common_versions.mk
++
++PRODUCT_COPY_FILES +=  \
++    vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
+-- 
+1.7.9
+
