@@ -92,7 +92,7 @@ index 9ab6d17..8aa3b9a 100644
 +	   while(fgets(buffer,128, fp)){
 +		//wpa_printf(MSG_DEBUG, "read: %s %s", buffer, drv->ifname);
 +		if ((str = os_strstr(buffer, drv->ifname))!=NULL){
-+		   	sscanf(buffer +  14, "%f %f", &link, &level);
++			sscanf(buffer +  14, "%f %f", &link, &level);
 +			wpa_printf(MSG_DEBUG, "found wlan0: %d %f", link, level);
 +		}
 +	   }
