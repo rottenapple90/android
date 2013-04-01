@@ -17,9 +17,9 @@
       revision="gingerbread"/>
 
     <project path="external/libnl"
-      name="idor/libnl"
+      name="milaq/android_external_libnl"
       remote="github"
-      revision="android_froyo" />
+      revision="gingerbread" />
 
     <project path="vendor/htc/kovsky"
       name="milaq/android_vendor_htc_kovsky"
