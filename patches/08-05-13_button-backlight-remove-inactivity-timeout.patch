@@ -1,0 +1,39 @@
+From d17a0da673bd104f804b51b387e34e6c0cffaefe Mon Sep 17 00:00:00 2001
+From: milaq <micha.laqua@gmail.com>
+Date: Wed, 8 May 2013 13:41:49 +0200
+Subject: [PATCH] button-backlight: remove inactivity timeout
+
+rebased: Keep keyboard lit until the screen is dimmed [5e6c92]
+---
+ .../android/server/power/PowerManagerService.java  |   10 ++--------
+ 1 files changed, 2 insertions(+), 8 deletions(-)
+
+diff --git a/services/java/com/android/server/power/PowerManagerService.java b/services/java/com/android/server/power/PowerManagerService.java
+index 40279a2..7b2c550 100644
+--- a/services/java/com/android/server/power/PowerManagerService.java
++++ b/services/java/com/android/server/power/PowerManagerService.java
+@@ -1367,19 +1367,13 @@ public final class PowerManagerService extends IPowerManager.Stub
+                         int brightness = mButtonBrightnessOverrideFromWindowManager >= 0
+                                 ? mButtonBrightnessOverrideFromWindowManager
+                                 : mDisplayPowerRequest.screenBrightness;
++                        mButtonsLight.setBrightness(brightness);
+                         mKeyboardLight.setBrightness(mKeyboardVisible ? brightness : 0);
+-                        if (now > mLastUserActivityTime + BUTTON_ON_DURATION) {
+-                            mButtonsLight.setBrightness(0);
+-                        } else {
+-                            mButtonsLight.setBrightness(brightness);
+-                            if (brightness != 0) {
+-                                nextTimeout = now + BUTTON_ON_DURATION;
+-                            }
+-                        }
+                         mUserActivitySummary |= USER_ACTIVITY_SCREEN_BRIGHT;
+                     } else {
+                         nextTimeout = mLastUserActivityTime + screenOffTimeout;
+                         if (now < nextTimeout) {
++                            mButtonsLight.setBrightness(0);
+                             mKeyboardLight.setBrightness(0);
+                             mUserActivitySummary |= USER_ACTIVITY_SCREEN_DIM;
+                         }
+-- 
+1.7.9
+

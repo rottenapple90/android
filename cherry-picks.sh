@@ -28,6 +28,6 @@ function check_clean {
 
 # button-backlight: remove inactivity timeout
 pushd frameworks/base
-wget https://raw.github.com/milaq/android/cm-10.1/patches/12-02-13_button-backlight-remove-inactivity-timeout.patch
-git am 12-02-13_button-backlight-remove-inactivity-timeout.patch
+wget https://raw.github.com/milaq/android/cm-10.1/patches/08-05-13_button-backlight-remove-inactivity-timeout.patch
+git am 08-05-13_button-backlight-remove-inactivity-timeout.patch
 check_clean
