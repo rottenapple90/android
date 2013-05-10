@@ -1,52 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <manifest>
-  
-    <remote  name="oz"
-      fetch="git://git.omapzoom.org" />
-  
-    <project path="device/hp/tenderloin"
-      name="CyanogenMod/android_device_hp_tenderloin"
+
+    <project path="device/htc/common"
+      name="Evervolv/android_device_htc_common"
       remote="github"
       revision="ics"/>
 
-    <project path="device/lenovo/a107"
-      name="gmarkall/android_device_ideapad_a1"
-      remote="github"
-      revision="ics"/>
-      
-    <project path="device/lge/p940"
-      name="milaq/android_device_lge_p940"
+    <project path="device/htc/leo"
+      name="cmhtcleo/android_device_htc_leo"
       remote="github"
       revision="ics"/>
 
-    <remove-project name="CyanogenMod/android_hardware_ti_omap3"/>
-    <project path="hardware/ti/omap3"
-      name="fat-tire/android_hardware_ti_omap3"
-      remote="github"
-      revision="p-ics-mr1"/>
-
-    <project path="kernel/hp/tenderloin"
-      name="CyanogenMod/hp-kernel-tenderloin"
-      remote="github"
-      revision="ics"/>
-      
-    <project path="kernel/lge/p940"
-      name="milaq/android_kernel_lge_p940"
+    <remove-project name="CyanogenMod/android_hardware_msm7k"/>
+    <project path="hardware/msm7k"
+      name="Evervolv/android_hardware_msm7k"
       remote="github"
       revision="ics"/>
 
-    <project path="vendor/hp"
-      name="TheMuppets/proprietary_vendor_hp"
+    <remove-project name="CyanogenMod/android_hardware_qcom_display"/>
+    <project path="hardware/qcom/display"
+      name="Evervolv/android_hardware_qcom_display"
       remote="github"
       revision="ics"/>
 
-    <project path="vendor/lenovo/a107"
-      name="gmarkall/android_vendor_lenovo_a1_07"
+    <remove-project name="CyanogenMod/android_hardware_qcom_media"/>
+    <project path="hardware/qcom/media"
+      name="Evervolv/android_hardware_qcom_media"
       remote="github"
       revision="ics"/>
-      
-    <project path="vendor/lge/p940"
-      name="milaq/android_vendor_lge_p940"
+
+    <project path="hardware/qcom/camera"
+      name="cmhtcleo/android_hardware_qcom_camerahal"
+      remote="github"
+      revision="master"/>
+
+    <project path="kernel/htc/leo"
+      name="cmhtcleo/android_kernel_cmhtcleo"
+      remote="github"
+      revision="ics"/>
+
+    <project path="vendor/htc/leo"
+      name="cmhtcleo/android_vendor_htc_leo"
+      remote="github"
+      revision="ics"/>
+
+	<remove-project name="CyanogenMod/android_vendor_qcom_opensource_omx_mm-core"/>
+    <project path="vendor/qcom/opensource/omx/mm-core"
+      name="Evervolv/android_vendor_qcom_opensource_omx_mm-core"
+      remote="github"
+      revision="ics"/>
+
+	<remove-project name="CyanogenMod/android_vendor_qcom_opensource_omx_mm-video"/>
+    <project path="vendor/qcom/opensource/omx/mm-video"
+      name="Evervolv/android_vendor_qcom_opensource_omx_mm-video"
       remote="github"
       revision="ics"/>
 

@@ -1,7 +1,9 @@
-Cyanogenmod 9 manifests (milaq)
-================================
+Cyanogenmod 9 manifests (milaq) for HTC LEO
+===========================================
 
 DISCLAIMER: Please use 'CyanogenMod/android.git' to init the repos.
 
 then pull the local manifest to .repo/local_manifest.xml and repo sync
 (for leo use local_manifest_htc_leo.xml > .repo/local_manifest.xml)
+
+THIS IS ONLY FOR THE LEO ICS BUILDS
