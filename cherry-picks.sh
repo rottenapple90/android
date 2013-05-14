@@ -31,3 +31,9 @@ pushd frameworks/base
 wget https://raw.github.com/milaq/android/cm-10.1/patches/08-05-13_button-backlight-remove-inactivity-timeout.patch
 git am 08-05-13_button-backlight-remove-inactivity-timeout.patch
 check_clean
+
+# telephony: Support broken RIL implementations without CALL_RING events
+pushd frameworks/opt/telephony
+wget https://raw.github.com/milaq/android/cm-10.1/patches/14-05-13_telephony-Support-broken-RIL-implementations-without.patch
+git am 14-05-13_telephony-Support-broken-RIL-implementations-without.patch
+check_clean
