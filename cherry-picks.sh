@@ -26,8 +26,8 @@ function check_clean {
 # insert cherry-picks below
 #
 
-# Revert: "SurfaceFlinger: Dont skip composition if it is incomplete."
-#pushd frameworks/base
-#wget https://raw.github.com/milaq/android/ics_htc_leo/patches/10-05-13_button-backlight-remove-inactivity-timeout.patch
-#git am 10-05-13_button-backlight-remove-inactivity-timeout.patch
-#check_clean
+# Revert "SurfaceFlinger: Dont skip composition if it is incomplete."
+pushd frameworks/base
+wget https://raw.github.com/milaq/android/ics_htc_leo/patches/14-05-13_Revert-SurfaceFlinger-Dont-skip-composition-if-it-is-incomplete.patch
+git am 14-05-13_Revert-SurfaceFlinger-Dont-skip-composition-if-it-is-incomplete.patch
+check_clean

@@ -1,0 +1,34 @@
+From 303a59aa9e948ef1ea39b7857024d7e9c87abe59 Mon Sep 17 00:00:00 2001
+From: milaq <micha.laqua@gmail.com>
+Date: Tue, 14 May 2013 17:16:04 +0200
+Subject: [PATCH] Revert "SurfaceFlinger: Dont skip composition if it is
+ incomplete."
+
+This reverts commit 801392980a5ba70094d8fb734805cbf32f4a8478.
+
+doesn't work on leo
+---
+ services/surfaceflinger/SurfaceFlinger.cpp |    7 -------
+ 1 files changed, 0 insertions(+), 7 deletions(-)
+
+diff --git a/services/surfaceflinger/SurfaceFlinger.cpp b/services/surfaceflinger/SurfaceFlinger.cpp
+index ca4f155..99b7b19 100644
+--- a/services/surfaceflinger/SurfaceFlinger.cpp
++++ b/services/surfaceflinger/SurfaceFlinger.cpp
+@@ -491,13 +491,6 @@ bool SurfaceFlinger::threadLoop()
+         hw.compositionComplete();
+ #endif
+         usleep(16667); // 60 fps period
+-
+-#ifdef QCOM_HARDWARE
+-        //If the draw is skipped by any chance, we need to force
+-        //composition atleast once.
+-        HWComposer& hwc(hw.getHwComposer());
+-        hwc.perform(EVENT_FORCE_COMPOSITION, 1);
+-#endif
+     }
+     return true;
+ }
+-- 
+1.7.9
+
