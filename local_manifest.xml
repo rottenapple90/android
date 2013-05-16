@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <manifest>
 
+    <project path="device/hp/tenderloin"
+      name="CyanogenMod/android_device_hp_tenderloin"
+      remote="github"
+      revision="jellybean"/>
+
     <project path="device/lge/p940"
       name="milaq/android_device_lge_p940"
       remote="github"
       revision="jellybean"/>
 
+    <project path="kernel/hp/tenderloin"
+      name="CyanogenMod/hp-kernel-tenderloin"
+      remote="github"
+      revision="ics"/>
+
     <project path="kernel/lge/p940"
       name="milaq/android_kernel_lge_p940"
       remote="github"
       revision="jellybean"/>
-      
+
     <project path="vendor/lge/p940"
       name="milaq/android_vendor_lge_p940"
+      remote="github"
+      revision="jellybean"/>
+      
+    <project path="vendor/hp"
+      name="TheMuppets/proprietary_vendor_hp/"
       remote="github"
       revision="jellybean"/>
 
