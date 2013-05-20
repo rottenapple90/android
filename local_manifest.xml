@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <manifest>
 
+    <project path="device/hp/tenderloin"
+      name="milaq/android_device_hp_tenderloin"
+      remote="github"
+      revision="cm-10.1"/>
+
     <project path="device/lge/p940"
       name="milaq/android_device_lge_p940"
+      remote="github"
+      revision="cm-10.1"/>
+
+    <project path="kernel/hp/tenderloin"
+      name="milaq/android_kernel_hp_tenderloin"
       remote="github"
       revision="cm-10.1"/>
       
@@ -11,4 +21,27 @@
       remote="github"
       revision="cm-10.1"/>
 
+    <project path="vendor/hp"
+      name="TheMuppets/proprietary_vendor_hp/"
+      remote="github"
+      revision="jellybean"/>
+
+
+
+    <project path="hardware/atheros/wlan"
+      name="CyanogenMod/android_hardware_atheros_wlan"
+      remote="github"
+      revision="jellybean"/>
+
+    <project path="hardware/qcom/display-legacy"
+      name="arco/android_hardware_qcom_display-legacy"
+      remote="github"
+      revision="cm-10.1"/>
+
+    <project path="hardware/qcom/media-legacy"
+      name="arco/android_hardware_qcom_media-legacy"
+      remote="github"
+      revision="cm-10.1"/>
+
   </manifest>
+  
