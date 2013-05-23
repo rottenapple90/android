@@ -38,6 +38,12 @@ wget https://raw.github.com/milaq/android/cm-10.1/patches/14-05-13_telephony-Sup
 git am 14-05-13_telephony-Support-broken-RIL-implementations-without.patch
 check_clean
 
+# remove cmupdater (not needed for unofficial builds)
+pushd vendor/cm
+wget https://raw.github.com/milaq/android/cm-10.1/patches/23-05-13_remove-cmupdater-not-needed-for-unofficial-builds.patch
+git am 23-05-13_remove-cmupdater-not-needed-for-unofficial-builds.patch
+check_clean
+
 # WIP: properly support multivalued controls (needed by tenderloin)
 pushd external/tinyalsa
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_external_tinyalsa refs/changes/46/33646/1 && git cherry-pick FETCH_HEAD

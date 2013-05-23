@@ -1,0 +1,24 @@
+From 60a5b3515590f6a12d4c711fe0c3e5a77f1d76a8 Mon Sep 17 00:00:00 2001
+From: milaq <micha.laqua@gmail.com>
+Date: Thu, 23 May 2013 15:40:21 +0200
+Subject: [PATCH] remove cmupdater (not needed for unofficial builds)
+
+---
+ config/common.mk |    1 -
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+diff --git a/config/common.mk b/config/common.mk
+index 00d3ebf..bbde85c 100644
+--- a/config/common.mk
++++ b/config/common.mk
+@@ -155,7 +155,6 @@ PRODUCT_PACKAGES += \
+     audio_effects.conf \
+     CMWallpapers \
+     Apollo \
+-    CMUpdater \
+     CMFileManager \
+     LockClock
+ 
+-- 
+1.7.9
+
