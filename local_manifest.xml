@@ -48,5 +48,11 @@
       remote="github"
       revision="cm-10.1_old"/>
 
+    <remove-project name="CyanogenMod/android_packages_apps_CMUpdater"/>
+    <project path="packages/apps/CMUpdater"
+      name="milaq/android_packages_apps_CMUpdater"
+      remote="github"
+      revision="cm-10.1"/>
+
   </manifest>
   
