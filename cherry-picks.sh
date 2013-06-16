@@ -48,3 +48,9 @@ check_clean
 pushd external/tinyalsa
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_external_tinyalsa refs/changes/46/33646/1 && git cherry-pick FETCH_HEAD
 check_clean
+
+# kbuild: enable custom gnueabi toolchain
+pushd build
+wget https://raw.github.com/milaq/android/cm-10.1/patches/16-06-13_kbuild-enable-custom-gnueabi-toolchain.patch
+git am 16-06-13_kbuild-enable-custom-gnueabi-toolchain.patch
+check_clean

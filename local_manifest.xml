@@ -15,6 +15,11 @@
       name="milaq/android_kernel_hp_tenderloin"
       remote="github"
       revision="cm-10.1"/>
+
+    <project path="kernel/lge/p940"
+      name="milaq/android_kernel_lge_p940"
+      remote="github"
+      revision="cm-10.1"/>
       
     <project path="vendor/lge/p940"
       name="milaq/android_vendor_lge_p940"
@@ -30,6 +35,11 @@
       name="milaq/android_vendor_goomanager"
       remote="github"
       revision="cm-10.1"/>
+
+    <project path="prebuilt/linux-x86/toolchain"
+      name="milaq/android_toolchains"
+      remote="github"
+      revision="master"/>
 
 
 
@@ -55,4 +65,3 @@
       revision="cm-10.1"/>
 
   </manifest>
-  
