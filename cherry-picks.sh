@@ -54,3 +54,9 @@ pushd build
 wget https://raw.github.com/milaq/android/cm-10.1/patches/16-06-13_kbuild-enable-custom-gnueabi-toolchain.patch
 git am 16-06-13_kbuild-enable-custom-gnueabi-toolchain.patch
 check_clean
+
+# camera: add SXGA resolution
+pushd packages/apps/Camera
+wget https://raw.github.com/milaq/android/cm-10.1/patches/20-06-13_add-SXGA-resolution.patch
+git am 20-06-13_add-SXGA-resolution.patch
+check_clean
