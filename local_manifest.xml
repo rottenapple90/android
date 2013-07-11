@@ -42,6 +42,10 @@
       revision="master"/>
 
 
+    <project path="external/compat-wireless"
+      name="TouchpadCM/compat-wireless-3.5-rc3-1-sn"
+      remote="github"
+      revision="master"/>
 
     <project path="external/compat-drivers"
       name="milaq/compat-drivers-3.9-rc4-2"
