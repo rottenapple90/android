@@ -47,8 +47,8 @@
       remote="github"
       revision="master"/>
 
-    <project path="external/compat-drivers"
-      name="milaq/compat-drivers-3.9-rc4-2"
+    <project path="external/backports-wireless"
+      name="jcsullins/backports-3.10-2"
       remote="github"
       revision="master"/>
 
