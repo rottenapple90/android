@@ -1,0 +1,34 @@
+From a4a939558141f731856ddd750cd1c998204feed5 Mon Sep 17 00:00:00 2001
+From: Ricardo Cerqueira <cyanogenmod@cerqueira.org>
+Date: Tue, 14 May 2013 17:01:20 +0200
+Subject: [PATCH] telephony: Support broken RIL implementations without
+ CALL_RING events
+
+This is probably specific to the LGE star: Extend the call_ring.multiple
+configuration to the ringing connection event, since the CALL_RING event
+itself doesn't appear. Without this, only the first ring happens.
+
+Enable with ro.telephony.call_ring.absent=true
+---
+ .../com/android/internal/telephony/PhoneBase.java  |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
+diff --git a/src/java/com/android/internal/telephony/PhoneBase.java b/src/java/com/android/internal/telephony/PhoneBase.java
+index d244ed6..712fbe4 100644
+--- a/src/java/com/android/internal/telephony/PhoneBase.java
++++ b/src/java/com/android/internal/telephony/PhoneBase.java
+@@ -1099,6 +1099,11 @@ public abstract class PhoneBase extends Handler implements Phone {
+         if (!mIsVoiceCapable)
+             return;
+         AsyncResult ar = new AsyncResult(null, cn, null);
++        if (SystemProperties.getBoolean(
++                "ro.telephony.call_ring.absent", true)) {
++            sendMessageDelayed(
++                    obtainMessage(EVENT_CALL_RING_CONTINUE, mCallRingContinueToken, 0), mCallRingDelay);
++        }
+         mNewRingingConnectionRegistrants.notifyRegistrants(ar);
+     }
+ 
+-- 
+1.7.9
+
