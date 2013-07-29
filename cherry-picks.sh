@@ -18,6 +18,11 @@ function check_clean {
     git am --abort
     popd
     exit 1
+  elif [ -d ".git/CHERRY_PICK_HEAD" ]
+  then
+    git cherry-pick --abort
+    popd
+    exit 1
   fi
   popd
 }
