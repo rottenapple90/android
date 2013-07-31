@@ -31,6 +31,11 @@
       remote="github"
       revision="jellybean"/>
 
+    <project path="vendor/fonts-roboto"
+      name="milaq/android_vendor_fonts-roboto"
+      remote="github"
+      revision="mr2"/>
+
     <project path="vendor/goomanager"
       name="milaq/android_vendor_goomanager"
       remote="github"
