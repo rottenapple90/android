@@ -4,53 +4,24 @@
     <project path="device/hp/tenderloin"
       name="milaq/android_device_hp_tenderloin"
       remote="github"
-      revision="cm-10.1"/>
-
-    <project path="device/lge/p940"
-      name="milaq/android_device_lge_p940"
-      remote="github"
-      revision="cm-10.1"/>
+      revision="cm-10.2"/>
 
     <project path="kernel/hp/tenderloin"
       name="milaq/android_kernel_hp_tenderloin"
       remote="github"
-      revision="cm-10.1"/>
-
-    <project path="kernel/lge/p940"
-      name="milaq/android_kernel_lge_p940"
-      remote="github"
-      revision="cm-10.1"/>
-      
-    <project path="vendor/lge/p940"
-      name="milaq/android_vendor_lge_p940"
-      remote="github"
-      revision="cm-10.1"/>
+      revision="cm-10.2"/>
 
     <project path="vendor/hp"
       name="TheMuppets/proprietary_vendor_hp"
       remote="github"
       revision="jellybean"/>
 
-    <project path="vendor/fonts-roboto"
-      name="milaq/android_vendor_fonts-roboto"
-      remote="github"
-      revision="mr2"/>
-
     <project path="vendor/goomanager"
       name="milaq/android_vendor_goomanager"
       remote="github"
-      revision="cm-10.1"/>
-
-    <project path="prebuilt/linux-x86/toolchain"
-      name="milaq/android_toolchains"
-      remote="github"
-      revision="master"/>
+      revision="cm-10.2"/>
 
 
-    <project path="external/compat-wireless"
-      name="TouchpadCM/compat-wireless-3.5-rc3-1-sn"
-      remote="github"
-      revision="master"/>
 
     <project path="external/backports-wireless"
       name="jcsullins/backports-3.10-2"
@@ -68,14 +39,8 @@
       revision="cm-10.1_old"/>
 
     <project path="hardware/qcom/media-legacy"
-      name="arco/android_hardware_qcom_media-legacy"
+      name="drmarble/android_hardware_qcom_media-legacy"
       remote="github"
-      revision="cm-10.1_old"/>
-
-    <remove-project name="CyanogenMod/android_packages_apps_CMUpdater"/>
-    <project path="packages/apps/CMUpdater"
-      name="milaq/android_packages_apps_CMUpdater"
-      remote="github"
-      revision="cm-10.1"/>
+      revision="cm-10.2"/>
 
   </manifest>
