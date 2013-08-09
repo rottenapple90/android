@@ -6,8 +6,23 @@
       remote="github"
       revision="cm-10.2"/>
 
+    <project path="device/samsung/maguro"
+      name="milaq/android_device_samsung_maguro"
+      remote="github"
+      revision="cm-10.2"/>
+
+    <project path="device/samsung/tuna"
+      name="milaq/android_device_samsung_tuna"
+      remote="github"
+      revision="cm-10.2"/>
+
     <project path="kernel/hp/tenderloin"
       name="milaq/android_kernel_hp_tenderloin"
+      remote="github"
+      revision="cm-10.2"/>
+
+    <project path="kernel/samsung/tuna"
+      name="milaq/android_kernel_samsung_tuna"
       remote="github"
       revision="cm-10.2"/>
 
@@ -15,6 +30,11 @@
       name="TheMuppets/proprietary_vendor_hp"
       remote="github"
       revision="jellybean"/>
+
+    <project path="vendor/samsung"
+      name="TheMuppets/proprietary_vendor_samsung"
+      remote="github"
+      revision="cm-10.2"/>
 
     <project path="vendor/goomanager"
       name="milaq/android_vendor_goomanager"
