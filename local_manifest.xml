@@ -7,12 +7,12 @@
       revision="cm-10.2"/>
 
     <project path="device/samsung/maguro"
-      name="milaq/android_device_samsung_maguro"
+      name="CyanogenMod/android_device_samsung_maguro"
       remote="github"
       revision="cm-10.2"/>
 
     <project path="device/samsung/tuna"
-      name="milaq/android_device_samsung_tuna"
+      name="CyanogenMod/android_device_samsung_tuna"
       remote="github"
       revision="cm-10.2"/>
 
@@ -22,7 +22,7 @@
       revision="cm-10.2"/>
 
     <project path="kernel/samsung/tuna"
-      name="milaq/android_kernel_samsung_tuna"
+      name="CyanogenMod/android_kernel_samsung_tuna"
       remote="github"
       revision="cm-10.2"/>
 
