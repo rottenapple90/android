@@ -47,10 +47,6 @@
       revision="master"/>
 
 
-    <project path="external/compat-wireless"
-      name="TouchpadCM/compat-wireless-3.5-rc3-1-sn"
-      remote="github"
-      revision="master"/>
 
     <project path="external/backports-wireless"
       name="jcsullins/backports-3.10-2"
