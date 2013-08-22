@@ -65,3 +65,9 @@ pushd packages/apps/Camera
 wget https://raw.github.com/milaq/android/cm-10.1/patches/20-06-13_add-SXGA-resolution.patch
 git am 20-06-13_add-SXGA-resolution.patch
 check_clean
+
+# camera: disable activities only if NO camera exists
+pushd packages/apps/Camera
+wget https://raw.github.com/milaq/android/cm-10.1/patches/22-08-13_Camera-disable-activities-only-if-NO-camera-exists.patch
+git am 22-08-13_Camera-disable-activities-only-if-NO-camera-exists.patch
+check_clean
