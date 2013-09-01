@@ -6,13 +6,8 @@
       remote="github"
       revision="cm-10.2"/>
 
-    <project path="device/samsung/maguro"
-      name="CyanogenMod/android_device_samsung_maguro"
-      remote="github"
-      revision="cm-10.2"/>
-
-    <project path="device/samsung/tuna"
-      name="CyanogenMod/android_device_samsung_tuna"
+    <project path="device/lge/mako"
+      name="CyanogenMod/android_device_lge_mako"
       remote="github"
       revision="cm-10.2"/>
 
@@ -21,8 +16,8 @@
       remote="github"
       revision="cm-10.2"/>
 
-    <project path="kernel/samsung/tuna"
-      name="CyanogenMod/android_kernel_samsung_tuna"
+    <project path="kernel/lge/mako"
+      name="CyanogenMod/lge-kernel-mako"
       remote="github"
       revision="cm-10.2"/>
 
@@ -31,8 +26,8 @@
       remote="github"
       revision="jellybean"/>
 
-    <project path="vendor/samsung"
-      name="TheMuppets/proprietary_vendor_samsung"
+    <project path="vendor/lge"
+      name="TheMuppets/proprietary_vendor_lge"
       remote="github"
       revision="cm-10.2"/>
 

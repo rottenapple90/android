@@ -1,4 +1,4 @@
-Cyanogenmod 10.2 manifests (milaq)
+Cyanogenmod 10.2 manifests + cherry-picks (milaq)
 ================================
 
 Android 4.3 Jellybean

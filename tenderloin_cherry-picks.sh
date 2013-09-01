@@ -30,12 +30,8 @@ function check_clean {
   popd
 }
 
-#
-# insert cherry-picks below
-#
-
-# remove cmupdater (not needed for unofficial builds)
-pushd vendor/cm
-wget https://raw.github.com/milaq/android/cm-10.2/patches/13-09-01_remove-cmupdater-not-needed-for-unofficial-builds.patch
-git am 13-09-01_remove-cmupdater-not-needed-for-unofficial-builds.patch
+# camera: add SXGA resolution
+pushd packages/apps/Camera
+wget https://raw.github.com/milaq/android/cm-10.2/patches/13-06-20_add-SXGA-resolution.patch
+git am 13-06-20_add-SXGA-resolution.patch
 check_clean
