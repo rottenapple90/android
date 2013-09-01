@@ -12,7 +12,10 @@
 # ---------------------------------------------------------
 
 function check_clean {
-  rm *.patch
+  if [ -d "*.patch" ]
+  then
+    rm *.patch
+  fi
   if [ -d ".git/rebase-apply" ]
   then
     git am --abort
