@@ -39,3 +39,9 @@ pushd frameworks/base
 wget https://raw.github.com/milaq/android/cm-10.2/patches/13-09-01_minimize-softbutton-spacing.patch
 git am 13-09-01_minimize-softbutton-spacing.patch
 check_clean
+
+# mako hdpi build
+pushd device/lge/mako
+wget https://raw.github.com/milaq/android/cm-10.2/patches/13-09-03_mako-hdpi-build.patch
+git am 13-09-03_mako-hdpi-build.patch
+check_clean
