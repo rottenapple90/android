@@ -16,8 +16,8 @@
       remote="github"
       revision="cm-10.2"/>
 
-    <project path="kernel/lge/mako"
-      name="CyanogenMod/lge-kernel-mako"
+    <project path="kernel/google/msm"
+      name="CyanogenMod/android_kernel_google_msm"
       remote="github"
       revision="cm-10.2"/>
 
