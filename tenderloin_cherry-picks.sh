@@ -31,9 +31,9 @@ function check_clean {
 }
 
 # camera: add SXGA resolution
-pushd packages/apps/Camera
-wget https://raw.github.com/milaq/android/cm-10.2/patches/13-06-20_add-SXGA-resolution.patch
-git am 13-06-20_add-SXGA-resolution.patch
+pushd packages/apps/Gallery2
+wget https://raw.github.com/milaq/android/cm-10.2/patches/13-09-18_add-SXGA-resolution.patch
+git am 13-09-18_add-SXGA-resolution.patch
 check_clean
 
 # evervolv mods, add a delay for file open, fix try 5 times

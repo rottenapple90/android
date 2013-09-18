@@ -1,7 +1,7 @@
-From 90def4dc76b4fd943efc9a699001b4d2f6a0a23e Mon Sep 17 00:00:00 2001
+From 62e8b83d83db3edd22b133bf8f75c4ab3a78cbf4 Mon Sep 17 00:00:00 2001
 From: milaq <micha.laqua@gmail.com>
-Date: Thu, 20 Jun 2013 19:27:30 +0200
-Subject: [PATCH] add SXGA resolution used by tenderloin
+Date: Wed, 18 Sep 2013 10:39:03 +0200
+Subject: [PATCH] add SXGA resolution e.g. for tenderloin
 
 ---
  res/values/arrays.xml     |    2 ++
@@ -9,10 +9,10 @@ Subject: [PATCH] add SXGA resolution used by tenderloin
  2 files changed, 4 insertions(+), 0 deletions(-)
 
 diff --git a/res/values/arrays.xml b/res/values/arrays.xml
-index 7f600ca..40203e5 100644
+index 5303115..03f746f 100644
 --- a/res/values/arrays.xml
 +++ b/res/values/arrays.xml
-@@ -175,6 +175,7 @@
+@@ -176,6 +176,7 @@
          <item>@string/pref_camera_picturesize_entry_1_9mp</item>
          <item>@string/pref_camera_picturesize_entry_1_5mp</item>
          <item>@string/pref_camera_picturesize_entry_1_3mp</item>
@@ -20,7 +20,7 @@ index 7f600ca..40203e5 100644
          <item>@string/pref_camera_picturesize_entry_1mp</item>
          <item>@string/pref_camera_picturesize_entry_wxga</item>
          <item>@string/pref_camera_picturesize_entry_xga</item>
-@@ -210,6 +211,7 @@
+@@ -212,6 +213,7 @@
          <item>1392x1392</item>
          <item>1600x960</item>
          <item>1280x960</item>
@@ -29,10 +29,10 @@ index 7f600ca..40203e5 100644
          <item>1280x720</item>
          <item>1024x600</item>
 diff --git a/res/values/cm_strings.xml b/res/values/cm_strings.xml
-index 474ef44..f29cac5 100644
+index 44409f3..678c94f 100644
 --- a/res/values/cm_strings.xml
 +++ b/res/values/cm_strings.xml
-@@ -47,6 +47,8 @@
+@@ -44,6 +44,8 @@
      <string name="pref_camera_picturesize_entry_1_9mp">1.9M pixels</string>
      <!-- Settings screen, dialog choice for 1.5 megapixels picture size [CHAR LIMIT=15] -->
      <string name="pref_camera_picturesize_entry_1_5mp">1.5M pixels</string>
