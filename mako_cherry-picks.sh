@@ -45,3 +45,9 @@ pushd device/lge/mako
 wget https://raw.github.com/milaq/android/cm-10.2/patches/13-09-03_mako-hdpi-build.patch
 git am 13-09-03_mako-hdpi-build.patch
 check_clean
+
+# navbar: make it a tad smaller
+pushd frameworks/base
+wget https://raw.github.com/milaq/android/cm-10.2/patches/13-09-21_navbar-make-it-a-tad-smaller.patch
+git am 13-09-21_navbar-make-it-a-tad-smaller.patch
+check_clean
