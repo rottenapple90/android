@@ -1,0 +1,112 @@
+From 49746e6b5ee91b088255a34c4392a841224d4b67 Mon Sep 17 00:00:00 2001
+From: James Sullins <jcsullins@gmail.com>
+Date: Tue, 20 Nov 2012 15:32:14 -0600
+Subject: [PATCH] ext4_utils: fix corruption issue on kernels w/o ext4_lazyinit
+
+ * Add a BoardConfig option BOARD_NO_EXT4_LAZYINIT
+   for kernels that do not support ext4_lazyinit
+
+ * If that option is enabled, make_ext4fs will call
+   make_ext4fs_internal with init_itabs=1 thus enabling
+   the creation of the unused inode tables with
+   init_unused_inode_tables instead of expecting the kernel
+   to do so with ext4_lazyinit on first mount
+
+Change-Id: If8be6dc312f0cb9d8974618f72e66cd5caeb25af
+---
+ ext4_utils/Android.mk    | 27 +++++++++++++++++++++++++++
+ ext4_utils/make_ext4fs.c |  4 ++++
+ 2 files changed, 31 insertions(+)
+
+diff --git a/ext4_utils/Android.mk b/ext4_utils/Android.mk
+index fc073d4..69fec97 100644
+--- a/ext4_utils/Android.mk
++++ b/ext4_utils/Android.mk
+@@ -28,6 +28,11 @@ ifeq ($(HAVE_SELINUX), true)
+   LOCAL_STATIC_LIBRARIES += libselinux
+   LOCAL_CFLAGS += -DHAVE_SELINUX
+ endif # HAVE_SELINUX
++
++ifeq ($(BOARD_NO_EXT4_LAZYINIT), true)
++LOCAL_CFLAGS += -DNO_LAZYINIT
++endif
++
+ include $(BUILD_HOST_STATIC_LIBRARY)
+ 
+ 
+@@ -47,6 +52,11 @@ else
+     LOCAL_CFLAGS += -DHAVE_SELINUX
+   endif # HAVE_SELINUX
+ endif
++
++ifeq ($(BOARD_NO_EXT4_LAZYINIT), true)
++LOCAL_CFLAGS += -DNO_LAZYINIT
++endif
++
+ include $(BUILD_HOST_EXECUTABLE)
+ 
+ 
+@@ -73,6 +83,10 @@ ifeq ($(BOARD_SUPPRESS_EMMC_WIPE),true)
+     LOCAL_CFLAGS += -DSUPPRESS_EMMC_WIPE
+ endif
+ 
++ifeq ($(BOARD_NO_EXT4_LAZYINIT), true)
++LOCAL_CFLAGS += -DNO_LAZYINIT
++endif
++
+ include $(BUILD_SHARED_LIBRARY)
+ 
+ 
+@@ -92,6 +106,10 @@ ifeq ($(BOARD_SUPPRESS_EMMC_WIPE),true)
+     LOCAL_CFLAGS += -DSUPPRESS_EMMC_WIPE
+ endif
+ 
++ifeq ($(BOARD_NO_EXT4_LAZYINIT), true)
++LOCAL_CFLAGS += -DNO_LAZYINIT
++endif
++
+ include $(BUILD_STATIC_LIBRARY)
+ 
+ 
+@@ -104,6 +122,11 @@ ifeq ($(HAVE_SELINUX), true)
+   LOCAL_SHARED_LIBRARIES += libselinux
+   LOCAL_CFLAGS += -DHAVE_SELINUX
+ endif # HAVE_SELINUX
++
++ifeq ($(BOARD_NO_EXT4_LAZYINIT), true)
++LOCAL_CFLAGS += -DNO_LAZYINIT
++endif
++
+ include $(BUILD_EXECUTABLE)
+ 
+ include $(CLEAR_VARS)
+@@ -127,6 +150,10 @@ ifeq ($(HAVE_SELINUX), true)
+   LOCAL_CFLAGS += -DHAVE_SELINUX
+ endif # HAVE_SELINUX
+ 
++ifeq ($(BOARD_NO_EXT4_LAZYINIT), true)
++LOCAL_CFLAGS += -DNO_LAZYINIT
++endif
++
+ include $(BUILD_EXECUTABLE)
+ 
+ include $(CLEAR_VARS)
+diff --git a/ext4_utils/make_ext4fs.c b/ext4_utils/make_ext4fs.c
+index 55882b4..656c793 100644
+--- a/ext4_utils/make_ext4fs.c
++++ b/ext4_utils/make_ext4fs.c
+@@ -358,7 +358,11 @@ int make_ext4fs(const char *filename, s64 len,
+ 		return EXIT_FAILURE;
+ 	}
+ 
++#ifdef NO_LAZYINIT
++	status = make_ext4fs_internal(fd, NULL, mountpoint, NULL, 0, 0, 0, 1, 1, sehnd);
++#else
+ 	status = make_ext4fs_internal(fd, NULL, mountpoint, NULL, 0, 0, 0, 1, 0, sehnd);
++#endif
+ 	close(fd);
+ 
+ 	return status;
+-- 
+1.8.1.2
+

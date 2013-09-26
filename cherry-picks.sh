@@ -71,3 +71,9 @@ pushd packages/apps/Camera
 wget https://raw.github.com/milaq/android/cm-10.1/patches/22-08-13_Camera-disable-activities-only-if-NO-camera-exists.patch
 git am 22-08-13_Camera-disable-activities-only-if-NO-camera-exists.patch
 check_clean
+
+# ext4_utils: fix corruption issue on kernels w/o ext4_lazyinit
+pushd system/extras
+wget https://raw.github.com/milaq/android/cm-10.1/patches/26-09-13_ext4_utils-fix-corruption-issue-on-kernels-w-o-ext4.patch
+git am 26-09-13_ext4_utils-fix-corruption-issue-on-kernels-w-o-ext4.patch
+check_clean
