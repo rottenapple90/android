@@ -1,7 +1,7 @@
-From cf906a28d5bc9d4b931f3bb2d4787291af9eb22c Mon Sep 17 00:00:00 2001
+From fb3747c7f676b7c074c7c143e6402ecd5c5cfa8a Mon Sep 17 00:00:00 2001
 From: David Marble <drmarble1@gmail.com>
 Date: Fri, 6 Sep 2013 16:47:57 -0500
-Subject: [PATCH] we need our own fsck for tenderloin. this breaks recovery,
+Subject: [PATCH] We need our own fsck for tenderloin. This breaks recovery,
  but then, it doesn't work for us anyway, we use a custom
  cwm (or TWRP).
 
@@ -12,7 +12,7 @@ Change-Id: Ifa7765410d82dde267f359879db980fdaec15d92
  2 files changed, 3 insertions(+), 5 deletions(-)
 
 diff --git a/Android.mk b/Android.mk
-index f25dc86..452cd8f 100644
+index 382ae16..c413249 100644
 --- a/Android.mk
 +++ b/Android.mk
 @@ -80,7 +80,7 @@ $(foreach board_define,$(BOARD_RECOVERY_DEFINES), \
@@ -31,19 +31,19 @@ index f25dc86..452cd8f 100644
 -LOCAL_STATIC_LIBRARIES += libvoldclient libsdcard libminipigz libfsck_msdos
 +LOCAL_STATIC_LIBRARIES += libvoldclient libsdcard libminipigz
  LOCAL_STATIC_LIBRARIES += libmake_ext4fs libext4_utils_static libz libsparse_static
- LOCAL_STATIC_LIBRARIES += libminzip libunz libmincrypt
  
-@@ -118,7 +118,7 @@ LOCAL_STATIC_LIBRARIES += libselinux
+ ifeq ($(TARGET_USERIMAGES_USE_F2FS), true)
+@@ -124,7 +124,7 @@ LOCAL_STATIC_LIBRARIES += libselinux
  
  include $(BUILD_EXECUTABLE)
  
 -RECOVERY_LINKS := bu make_ext4fs edify busybox flash_image dump_image mkyaffs2image unyaffs erase_image nandroid reboot volume setprop getprop start stop dedupe minizip setup_adbd fsck_msdos newfs_msdos vdc sdcard pigz
 +RECOVERY_LINKS := bu make_ext4fs edify busybox flash_image dump_image mkyaffs2image unyaffs erase_image nandroid reboot volume setprop getprop start stop dedupe minizip setup_adbd newfs_msdos vdc sdcard pigz
  
- # nc is provided by external/netcat
- RECOVERY_SYMLINKS := $(addprefix $(TARGET_RECOVERY_ROOT_OUT)/sbin/,$(RECOVERY_LINKS))
+ ifeq ($(TARGET_USERIMAGES_USE_F2FS), true)
+ RECOVERY_LINKS += mkfs.f2fs fsck.f2fs fibmap.f2fs
 diff --git a/recovery_cmds.h b/recovery_cmds.h
-index 7ad3b93..b92b6d5 100644
+index 3d1d1fa..d8d0667 100644
 --- a/recovery_cmds.h
 +++ b/recovery_cmds.h
 @@ -36,7 +36,6 @@ extern int reboot_main(int argc, char **argv);
@@ -54,7 +54,7 @@ index 7ad3b93..b92b6d5 100644
  extern int newfs_msdos_main(int argc, char **argv);
  extern int vdc_main(int argc, char **argv);
  extern int pigz_main(int argc, char **argv);
-@@ -66,7 +65,6 @@ static const struct recovery_cmd recovery_cmds[] = {
+@@ -71,7 +70,6 @@ static const struct recovery_cmd recovery_cmds[] = {
      { "poweroff",       reboot_main },
      { "setprop",        setprop_main },
      { "getprop",        getprop_main },

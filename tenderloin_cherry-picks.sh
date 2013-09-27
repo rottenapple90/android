@@ -50,6 +50,6 @@ check_clean
 
 # recovery: we need our own fsck for tenderloin
 pushd bootable/recovery
-wget https://raw.github.com/milaq/android/cm-10.2/patches/13-09-14_we-need-our-own-fsck-for-tenderloin.patch
-git am 13-09-14_we-need-our-own-fsck-for-tenderloin.patch
+wget https://raw.github.com/milaq/android/cm-10.2/patches/13-09-27_we-need-our-own-fsck-for-tenderloin.patch
+git am 13-09-27_we-need-our-own-fsck-for-tenderloin.patch
 check_clean
