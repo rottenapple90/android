@@ -49,13 +49,13 @@
       revision="jellybean"/>
 
     <project path="hardware/qcom/display-legacy"
-      name="milaq/android_hardware_qcom_display-legacy"
+      name="arco/android_hardware_qcom_display-legacy"
       remote="github"
       revision="cm-10.2_old"/>
 
     <project path="hardware/qcom/media-legacy"
-      name="milaq/android_hardware_qcom_media-legacy"
+      name="arco/android_hardware_qcom_media-legacy"
       remote="github"
-      revision="cm-10.1_old"/>
+      revision="cm-10.2_old"/>
 
   </manifest>
