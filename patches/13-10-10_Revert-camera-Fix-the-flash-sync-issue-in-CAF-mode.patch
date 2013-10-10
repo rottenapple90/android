@@ -1,0 +1,56 @@
+From 39be2564d85a95d0195b6a906a5be8588cce7a6b Mon Sep 17 00:00:00 2001
+From: milaq <micha.laqua@gmail.com>
+Date: Thu, 10 Oct 2013 14:04:19 +0200
+Subject: [PATCH] Revert "camera: Fix the flash sync issue in CAF mode"
+
+This reverts commit 0be4d675df0654f1b55f0f516893b8cc6f696f56.
+
+* messed up flash in GalleryGoogle
+---
+ camera/QCameraHWI.cpp |   14 +++-----------
+ 1 files changed, 3 insertions(+), 11 deletions(-)
+
+diff --git a/camera/QCameraHWI.cpp b/camera/QCameraHWI.cpp
+index e0acb9b..7fbb40c 100755
+--- a/camera/QCameraHWI.cpp
++++ b/camera/QCameraHWI.cpp
+@@ -1635,9 +1635,9 @@ status_t  QCameraHardwareInterface::takePicture()
+     bool hdr;
+     int  frm_num = 1, rc = 0;
+     int  exp[MAX_HDR_EXP_FRAME_NUM];
+-    isp3a_af_mode_t afMode = getAutoFocusMode(mParameters);
+ 
+     if(QCAMERA_HAL_RECORDING_STARTED != mPreviewState){
++      isp3a_af_mode_t afMode = getAutoFocusMode(mParameters);
+       if (!mFlashCond)
+       {
+         mFlashCond = getFlashCondition();
+@@ -1679,12 +1679,8 @@ status_t  QCameraHardwareInterface::takePicture()
+             }
+             return ret;
+         }
+-
+-
+-        if (afMode != AF_MODE_CAF)
+-            /*prepare snapshot, e.g LED*/
+-            takePicturePrepareHardware( );
+-
++        /*prepare snapshot, e.g LED*/
++        takePicturePrepareHardware( );
+         /* There's an issue where we have a glimpse of corrupted data between
+            a time we stop a preview and display the postview. It happens because
+            when we call stopPreview we deallocate the preview buffers hence overlay
+@@ -1696,10 +1692,6 @@ status_t  QCameraHardwareInterface::takePicture()
+         /* stop preview */
+         pausePreviewForSnapshot();
+ 
+-        if (afMode == AF_MODE_CAF)
+-            /*prepare snapshot, e.g LED*/
+-            takePicturePrepareHardware( );
+-
+         /* call Snapshot start() :*/
+         ret =  mStreamSnap->start();
+         if (MM_CAMERA_OK != ret){
+-- 
+1.7.9
+

@@ -45,3 +45,9 @@ pushd device/lge/mako
 wget https://raw.github.com/milaq/android/cm-10.2/patches/13-09-03_mako-hdpi-build.patch
 git am 13-09-03_mako-hdpi-build.patch
 check_clean
+
+# Revert "camera: Fix the flash sync issue in CAF mode" (messed up flash in GalleryGoogle)
+pushd device/lge/mako
+wget https://raw.github.com/milaq/android/cm-10.2/patches/13-10-10_Revert-camera-Fix-the-flash-sync-issue-in-CAF-mode.patch
+git am 13-10-10_Revert-camera-Fix-the-flash-sync-issue-in-CAF-mode.patch
+check_clean
