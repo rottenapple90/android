@@ -1,0 +1,24 @@
+From c9908d20f058125907ffa084c5ba91868ac7f6e1 Mon Sep 17 00:00:00 2001
+From: milaq <micha.laqua@gmail.com>
+Date: Tue, 22 Oct 2013 14:21:16 +0200
+Subject: [PATCH] remove cmupdater (not needed for unofficial builds)
+
+---
+ config/common.mk | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/config/common.mk b/config/common.mk
+index 038baa1..907361b 100644
+--- a/config/common.mk
++++ b/config/common.mk
+@@ -216,7 +216,6 @@ PRODUCT_PACKAGES += \
+ ifneq ($(TARGET_BUILD_VARIANT),user)
+ 
+ PRODUCT_PACKAGES += \
+-    CMUpdater \
+     Superuser \
+     su
+ 
+-- 
+1.8.1.2
+
