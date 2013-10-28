@@ -36,6 +36,6 @@ function check_clean {
 
 # remove cmupdater (not needed for unofficial builds)
 pushd vendor/cm
-wget https://raw.github.com/milaq/android/cm-10.2/patches/13-10-22_remove-cmupdater-not-needed-for-unofficial-builds.patch
-git am 13-10-22_remove-cmupdater-not-needed-for-unofficial-builds.patch
+wget https://raw.github.com/milaq/android/cm-10.2/patches/13-10-28_remove-cmupdater-not-needed-for-unofficial-builds.patch
+git am 13-10-28_remove-cmupdater-not-needed-for-unofficial-builds.patch
 check_clean
