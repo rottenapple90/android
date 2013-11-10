@@ -31,8 +31,7 @@
       remote="github"
       revision="cm-10.2"/>
 
-
-
+    <remove-project name="CyanogenMod/android_packages_apps_CMUpdater"/>
 
     <project path="external/backports-wireless"
       name="jcsullins/backports-3.10-2"
