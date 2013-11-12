@@ -34,14 +34,11 @@ function check_clean {
 # insert cherry-picks below
 #
 
-# minimize softbutton spacing
-pushd frameworks/base
-wget https://raw.github.com/milaq/android/cm-10.2/patches/13-09-01_minimize-softbutton-spacing.patch
-git am 13-09-01_minimize-softbutton-spacing.patch
-check_clean
-
 # mako hdpi build
-pushd device/lge/mako
-wget https://raw.github.com/milaq/android/cm-10.2/patches/13-09-03_mako-hdpi-build.patch
-git am 13-09-03_mako-hdpi-build.patch
+PATCH=13-11-12_mako-hdpi-build
+FOLDER=device/lge/mako
+###
+pushd ${FOLDER}
+wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
+git am ${PATCH}.patch
 check_clean
