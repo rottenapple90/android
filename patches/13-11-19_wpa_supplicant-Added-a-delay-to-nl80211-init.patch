@@ -1,0 +1,26 @@
+From 27e27fa81b6936c74d0af4f0255323d867c6b228 Mon Sep 17 00:00:00 2001
+From: flintman <flintman@flintmancomputers.com>
+Date: Tue, 19 Nov 2013 15:57:45 +0100
+Subject: [PATCH] wpa_supplicant: Added a delay to nl80211 init The delay is
+ needed to allow time for the device to start.
+
+---
+ src/drivers/driver_nl80211.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/drivers/driver_nl80211.c b/src/drivers/driver_nl80211.c
+index 79f0292..ea888e1 100644
+--- a/src/drivers/driver_nl80211.c
++++ b/src/drivers/driver_nl80211.c
+@@ -3697,6 +3697,8 @@ static void * wpa_driver_nl80211_init(void *ctx, const char *ifname,
+ 	if (nl80211_init_bss(bss))
+ 		goto failed;
+ 
++	sleep(15);
++
+ 	rcfg = os_zalloc(sizeof(*rcfg));
+ 	if (rcfg == NULL)
+ 		goto failed;
+-- 
+1.8.1.2
+
