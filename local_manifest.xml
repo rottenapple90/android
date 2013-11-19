@@ -42,6 +42,11 @@
       revision="master"/>
 
 
+    <remove-project name="CyanogenMod/android_bootable_recovery"/>
+    <project path="bootable/recovery"
+      name="milaq/android_bootable_recovery"
+      remote="github"
+      revision="cm-10.1_new"/>
 
     <project path="external/backports-wireless"
       name="jcsullins/backports-3.10-2"
