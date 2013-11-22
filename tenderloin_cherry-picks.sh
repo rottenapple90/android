@@ -53,3 +53,9 @@ pushd bootable/recovery
 wget https://raw.github.com/milaq/android/cm-10.2/patches/13-09-27_we-need-our-own-fsck-for-tenderloin.patch
 git am 13-09-27_we-need-our-own-fsck-for-tenderloin.patch
 check_clean
+
+# btservice/AdapterState: handle ENABLED_READY in OffState
+pushd packages/apps/Bluetooth
+wget https://raw.github.com/milaq/android/cm-10.2/patches/13-11-22_btservice-AdaperState-handle-ENABLED_READY.patch
+git am 13-11-22_btservice-AdaperState-handle-ENABLED_READY.patch
+check_clean

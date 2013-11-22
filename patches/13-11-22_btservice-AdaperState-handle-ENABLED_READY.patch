@@ -1,0 +1,39 @@
+From fdc0097583ded22af1a81fdfc0c6edb1ddd73657 Mon Sep 17 00:00:00 2001
+From: James Sullins <jcsullins@gmail.com>
+Date: Thu, 21 Nov 2013 16:49:26 -0600
+Subject: [PATCH] btservice/AdaperState: handle ENABLED_READY in OffState
+
+If the adapter takes too long (more than ENABLE_TIMEOUT_DELAY) to enable,
+the AdapterState will go into the OffState. In this state, ENABLED_READY
+messages are ignored. When this happens, the bt vendor code thinks
+it's enabled, but the AdapterState doesn't. Thus, the two layers will
+stay out-of-sync until a reboot.
+
+Handling the ENABLED_READY message while in OffState seems to be a
+workable solution to the situation outlined above.
+
+Change-Id: I6d090440a085b433e50dbb7edee20eb1efa510de
+---
+ src/com/android/bluetooth/btservice/AdapterState.java | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/src/com/android/bluetooth/btservice/AdapterState.java b/src/com/android/bluetooth/btservice/AdapterState.java
+index 1b92542..8e93b12 100644
+--- a/src/com/android/bluetooth/btservice/AdapterState.java
++++ b/src/com/android/bluetooth/btservice/AdapterState.java
+@@ -138,6 +138,12 @@ final class AdapterState extends StateMachine {
+                    if (DBG) Log.d(TAG,"CURRENT_STATE=OFF, MESSAGE = USER_TURN_OFF");
+                    //TODO: Handle case of service started and stopped without enable
+                    break;
++               case ENABLED_READY:
++                   if (DBG) Log.d(TAG,"CURRENT_STATE=OFF, MESSAGE = ENABLED_READY");
++                   mAdapterProperties.onBluetoothReady();
++                   transitionTo(mOnState);
++                   notifyAdapterStateChange(BluetoothAdapter.STATE_ON);
++                   break;
+                default:
+                    if (DBG) Log.d(TAG,"ERROR: UNEXPECTED MESSAGE: CURRENT_STATE=OFF, MESSAGE = " + msg.what );
+                    return false;
+-- 
+1.8.3.2
+
