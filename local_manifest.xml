@@ -68,6 +68,11 @@
       remote="github"
       revision="cm-10.2_old"/>
 
+    <project path="hardware/libbt-hci"
+      name="CMTP-CM10-1-BT/libbt-hci"
+      remote="github"
+      revision="cm-10.1"/>
+
     <project path="prebuilt/linux-x86/toolchain"
       name="milaq/android_toolchains"
       remote="github"
