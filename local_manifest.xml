@@ -41,7 +41,7 @@
     <project path="hardware/atheros/wlan"
       name="milaq/android_hardware_atheros_wlan"
       remote="github"
-      revision="jellybean"/>
+      revision="cm-10.1"/>
 
     <project path="hardware/qcom/display-legacy"
       name="arco/android_hardware_qcom_display-legacy"
