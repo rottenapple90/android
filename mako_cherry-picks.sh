@@ -42,3 +42,12 @@ pushd ${FOLDER}
 wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
 git am ${PATCH}.patch
 check_clean
+
+# minimize softbutton spacing
+PATCH=13-11-24_minimize-softbutton-spacing
+FOLDER=frameworks/base
+###
+pushd ${FOLDER}
+wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
+git am ${PATCH}.patch
+check_clean
