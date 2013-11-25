@@ -65,3 +65,12 @@ check_clean
 pushd external/iproute2
 git revert 4c48963517f1569ce909ad2f8a4b7a675de5a1f6
 check_clean
+
+# btservice/AdaperState: handle ENABLED_READY in OffState
+PATCH=13-11-25_btservice-AdaperState-handle-ENABLED_READY
+FOLDER=packages/apps/Bluetooth
+###
+pushd ${FOLDER}
+wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
+git am ${PATCH}.patch
+check_clean
