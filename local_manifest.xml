@@ -2,7 +2,7 @@
   <manifest>
 
     <project path="device/bn/encore"
-      name="CyanogenMod/android_device_bn_encore"
+      name="milaq/android_device_bn_encore"
       remote="github"
       revision="cm-10.2"/>
 
