@@ -22,7 +22,7 @@
       revision="cm-10.2"/>
 
     <project path="kernel/bn/encore"
-      name="CyanogenMod/android_kernel_bn_encore"
+      name="milaq/android_kernel_bn_encore"
       remote="github"
       revision="encore-omap3-3.0.y"/>
 
