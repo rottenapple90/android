@@ -1,8 +1,10 @@
-Cyanogenmod 11 manifests + cherry-picks (milaq)
+Cyanogenmod 11
+manifests + cherry-picks (milaq)
 ================================
 
 Android 4.4 KitKat
 
-DISCLAIMER: Please use 'CyanogenMod/android.git' to init the repos.
+use 'CyanogenMod/android.git' to init the repos.
+pull the local manifest to .repo/local_manifests/local_manifest.xml and repo sync
 
-then pull the local manifest to .repo/local_manifest.xml and repo sync
+(cherry pick when needed)
