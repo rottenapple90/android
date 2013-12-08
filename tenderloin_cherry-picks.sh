@@ -71,8 +71,10 @@ git am ${PATCH}.patch
 check_clean
 
 # build: Add SKIP_SET_METADATA flag
+PATCH=13-12-08_build-Add-SKIP_SET_METADATA-flag
 FOLDER=build
 ###
 pushd ${FOLDER}
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_build refs/changes/59/53559/4 && git cherry-pick FETCH_HEAD
+wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
+git am ${PATCH}.patch
 check_clean
