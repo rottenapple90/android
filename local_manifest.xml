@@ -6,6 +6,11 @@
       remote="github"
       revision="cm-10.2"/>
 
+    <project path="device/htc/leo"
+      name="milaq/android_device_htc_leo"
+      remote="github"
+      revision="cm-10.2"/>
+
     <project path="device/hp/tenderloin"
       name="milaq/android_device_hp_tenderloin"
       remote="github"
@@ -25,6 +30,11 @@
       name="milaq/android_kernel_bn_encore"
       remote="github"
       revision="encore-omap3-3.0.y"/>
+
+    <project path="kernel/htc/leo"
+      name="milaq/android_kernel_htc_leo"
+      remote="github"
+      revision="cm-10.2"/>
 
     <project path="kernel/hp/tenderloin"
       name="milaq/android_kernel_hp_tenderloin"
@@ -48,6 +58,11 @@
 
     <project path="vendor/bn"
       name="TheMuppets/proprietary_vendor_bn"
+      remote="github"
+      revision="cm-10.2"/>
+
+    <project path="vendor/htc"
+      name="TeamNightmare/proprietary_vendor_htc"
       remote="github"
       revision="cm-10.2"/>
 
@@ -82,6 +97,16 @@
       name="arco/android_hardware_qcom_media-legacy"
       remote="github"
       revision="cm-10.2_old"/>
+
+    <project path="hardware/qcom/audio-legacy"
+      name="milaq/android_hardware_qcom_audio-legacy"
+      remote="github"
+      revision="cm-10.2"/>
+
+    <project path="hardware/qcom/gps-legacy"
+      name="milaq/android_hardware_qcom_gps-legacy"
+      remote="github"
+      revision="cm-10.2"/>
 
     <project path="hardware/libbt-hci"
       name="CMTP-CM10-1-BT/libbt-hci"
