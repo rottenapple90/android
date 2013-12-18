@@ -88,6 +88,11 @@
       remote="github"
       revision="cm-10.1"/>
 
+    <project path="hardware/broadcom/wlan-legacy"
+      name="milaq/android_hardware_broadcom_wlan-legacy"
+      remote="github"
+      revision="master"/>
+
     <project path="hardware/qcom/display-legacy"
       name="milaq/android_hardware_qcom_display-legacy"
       remote="github"
