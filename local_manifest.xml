@@ -108,11 +108,6 @@
       remote="github"
       revision="cm-10.2"/>
 
-    <project path="hardware/qcom/gps-legacy"
-      name="milaq/android_hardware_qcom_gps-legacy"
-      remote="github"
-      revision="cm-10.2"/>
-
     <project path="hardware/libbt-hci"
       name="CMTP-CM10-1-BT/libbt-hci"
       remote="github"
