@@ -68,4 +68,9 @@
       remote="github"
       revision="cm-10.1"/>
 
+    <project path="packages/apps/HwaSettings"
+      name="royale1223/HwaSettings"
+      remote="github"
+      revision="jellybean"/>
+
   </manifest>
