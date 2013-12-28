@@ -79,13 +79,6 @@ wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
 git am ${PATCH}.patch
 check_clean
 
-# libgui: Bring back support for mHeap-based screenshots
-FOLDER=frameworks/native
-###
-pushd ${FOLDER}
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_native refs/changes/62/53162/6 && git cherry-pick FETCH_HEAD
-check_clean
-
 # hwui: Allow to blacklist android applications
 PATCH=13-12-27_hwui-Allow-to-blacklist-android-applications
 FOLDER=frameworks/base
