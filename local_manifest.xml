@@ -61,8 +61,8 @@
       remote="github"
       revision="cm-10.2"/>
 
-    <project path="vendor/htc"
-      name="TeamNightmare/proprietary_vendor_htc"
+    <project path="vendor/htc/leo"
+      name="milaq/android_vendor_htc_leo"
       remote="github"
       revision="cm-10.2"/>
 
