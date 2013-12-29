@@ -44,9 +44,9 @@
     <remove-project name="CyanogenMod/android_packages_apps_CMUpdater"/>
 
     <project path="external/backports-wireless"
-      name="milaq/backports-wireless-3.10-2"
+      name="milaq/android_external_backports-wireless"
       remote="github"
-      revision="master"/>
+      revision="3.10-2"/>
 
     <project path="hardware/atheros/wlan"
       name="milaq/android_hardware_atheros_wlan"
