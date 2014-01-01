@@ -46,7 +46,7 @@
     <project path="external/backports-wireless"
       name="milaq/android_external_backports-wireless"
       remote="github"
-      revision="3.12.2-1"/>
+      revision="3.10-2"/>
 
     <project path="hardware/atheros/wlan"
       name="milaq/android_hardware_atheros_wlan"
