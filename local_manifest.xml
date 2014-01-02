@@ -22,7 +22,7 @@
       revision="cm-11.0"/>
 
     <project path="device/samsung/galaxys2-common"
-      name="CyanogenMod/android_device_samsung_galaxys2-common"
+      name="milaq/android_device_samsung_galaxys2-common"
       remote="github"
       revision="cm-11.0"/>
 
