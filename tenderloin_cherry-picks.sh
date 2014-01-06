@@ -52,36 +52,9 @@ wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
 git am ${PATCH}.patch
 check_clean
 
-# recovery: we need our own fsck for tenderloin
-PATCH=13-11-19_We-need-our-own-fsck-for-tenderloin
-FOLDER=bootable/recovery
-###
-pushd ${FOLDER}
-wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
-git am ${PATCH}.patch
-check_clean
-
 # btservice/AdaperState: handle ENABLED_READY in OffState
 PATCH=13-11-25_btservice-AdaperState-handle-ENABLED_READY
 FOLDER=packages/apps/Bluetooth
-###
-pushd ${FOLDER}
-wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
-git am ${PATCH}.patch
-check_clean
-
-# build: Add SKIP_SET_METADATA flag
-PATCH=13-12-08_build-Add-SKIP_SET_METADATA-flag
-FOLDER=build
-###
-pushd ${FOLDER}
-wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
-git am ${PATCH}.patch
-check_clean
-
-# hwui: Allow to blacklist android applications
-PATCH=13-12-27_hwui-Allow-to-blacklist-android-applications
-FOLDER=frameworks/base
 ###
 pushd ${FOLDER}
 wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
