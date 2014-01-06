@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <manifest>
 
+    <project path="device/htc/leo"
+      name="milaq/android_device_htc_leo"
+      remote="github"
+      revision="cm-11.0"/>
+
     <project path="device/hp/tenderloin"
       name="milaq/android_device_hp_tenderloin"
       remote="github"
@@ -26,6 +31,11 @@
       remote="github"
       revision="cm-11.0"/>
 
+    <project path="kernel/htc/leo"
+      name="milaq/android_kernel_htc_leo"
+      remote="github"
+      revision="cm-11.0"/>
+
     <project path="kernel/hp/tenderloin"
       name="milaq/android_kernel_hp_tenderloin"
       remote="github"
@@ -43,6 +53,11 @@
 
     <project path="kernel/samsung/smdk4412"
       name="CyanogenMod/android_kernel_samsung_smdk4412"
+      remote="github"
+      revision="cm-11.0"/>
+
+    <project path="vendor/htc/leo"
+      name="milaq/android_vendor_htc_leo"
       remote="github"
       revision="cm-11.0"/>
 
