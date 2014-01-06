@@ -12,16 +12,16 @@
 # ---------------------------------------------------------
 
 function check_clean {
-  if [ -d "*.patch*" ]
+  if [ -e "*.patch*" ]
   then
     rm *.patch*
   fi
-  if [ -d ".git/rebase-apply" ]
+  if [ -e ".git/rebase-apply" ]
   then
     git am --abort
     popd
     exit 1
-  elif [ -d ".git/CHERRY_PICK_HEAD" ]
+  elif [ -e ".git/CHERRY_PICK_HEAD" ]
   then
     git cherry-pick --abort
     popd
