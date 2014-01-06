@@ -34,9 +34,9 @@ function check_clean {
 # insert cherry-picks below
 #
 
-# wpa_supplicant: Added a delay to nl80211 init
-PATCH=13-11-19_wpa_supplicant-Added-a-delay-to-nl80211-init
-FOLDER=external/wpa_supplicant_8
+# libhardware_legacy/wifi: add workaround for ath6kl driver
+PATCH=14-01-06-libhardware_legacy-wifi-add-workaround-for-ath6kl
+FOLDER=hardware/libhardware_legacy
 ###
 pushd ${FOLDER}
 wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
