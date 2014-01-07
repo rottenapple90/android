@@ -109,15 +109,25 @@
       remote="github"
       revision="master"/>
 
-    <project path="hardware/qcom/display-legacy"
-      name="milaq/android_hardware_qcom_display-legacy"
+    <project path="hardware/broadcom/wlan-legacy"
+      name="milaq/android_hardware_broadcom_wlan-legacy"
       remote="github"
-      revision="cm-11.0"/>
+      revision="master"/>
+
+    <project path="hardware/qcom/display-legacy"
+      name="Evervolv/android_hardware_qcom_display-legacy"
+      remote="github"
+      revision="kitkat"/>
 
     <project path="hardware/qcom/media-legacy"
-      name="milaq/android_hardware_qcom_media-legacy"
+      name="Evervolv/android_hardware_qcom_media-legacy"
       remote="github"
-      revision="cm-11.0"/>
+      revision="kitkat"/>
+
+    <project path="hardware/qcom/audio-legacy"
+      name="Evervolv/android_hardware_qcom_audio-legacy"
+      remote="github"
+      revision="kitkat"/>
 
     <project path="hardware/libbt-hci"
       name="CMTP-CM10-1-BT/libbt-hci"
