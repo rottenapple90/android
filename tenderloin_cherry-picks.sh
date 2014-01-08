@@ -35,7 +35,7 @@ function check_clean {
 #
 
 # libhardware_legacy/wifi: add workaround for ath6kl driver
-PATCH=14-01-06-libhardware_legacy-wifi-add-workaround-for-ath6kl
+PATCH=14-01-06_libhardware_legacy-wifi-add-workaround-for-ath6kl
 FOLDER=hardware/libhardware_legacy
 ###
 pushd ${FOLDER}
