@@ -12,9 +12,9 @@
 # ---------------------------------------------------------
 
 function check_clean {
-  if [ -e "*.patch*" ]
+  if [ -e *.patch ]
   then
-    rm *.patch*
+    rm *.patch
   fi
   if [ -e ".git/rebase-apply" ]
   then
