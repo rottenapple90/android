@@ -43,3 +43,11 @@ wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
 git am ${PATCH}.patch
 check_clean
 
+# Revert "disable led while charging"
+PATCH=14-01-09_Revert-disable-led-while-charging
+FOLDER=hardware/qcom/display-caf
+###
+pushd ${FOLDER}
+wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
+git am ${PATCH}.patch
+check_clean

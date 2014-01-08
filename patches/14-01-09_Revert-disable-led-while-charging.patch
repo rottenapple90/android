@@ -1,0 +1,44 @@
+From 3a0134582afa60e86e78a889eb6b0d2eb50b5c2f Mon Sep 17 00:00:00 2001
+From: Micha LaQua <micha.laqua@gmail.com>
+Date: Thu, 9 Jan 2014 00:39:47 +0100
+Subject: [PATCH] Revert "disable led while charging"
+
+This reverts commit 5c5ca0ca17981a07df315568a584902411b27f4c.
+---
+ liblight/lights.c |   13 +++++++++++++
+ 1 files changed, 13 insertions(+), 0 deletions(-)
+
+diff --git a/liblight/lights.c b/liblight/lights.c
+index 332a2ec..d6e22d9 100644
+--- a/liblight/lights.c
++++ b/liblight/lights.c
+@@ -237,6 +237,17 @@ handle_speaker_battery_locked(struct light_device_t* dev)
+ }
+ 
+ static int
++set_light_battery(struct light_device_t* dev,
++        struct light_state_t const* state)
++{
++    pthread_mutex_lock(&g_lock);
++    g_battery = *state;
++    handle_speaker_battery_locked(dev);
++    pthread_mutex_unlock(&g_lock);
++    return 0;
++}
++
++static int
+ set_light_notifications(struct light_device_t* dev,
+         struct light_state_t const* state)
+ {
+@@ -289,6 +300,8 @@ static int open_lights(const struct hw_module_t* module, char const* name,
+ 
+     if (0 == strcmp(LIGHT_ID_BACKLIGHT, name))
+         set_light = set_light_backlight;
++    else if (0 == strcmp(LIGHT_ID_BATTERY, name))
++        set_light = set_light_battery;
+     else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
+         set_light = set_light_notifications;
+     else if (0 == strcmp(LIGHT_ID_ATTENTION, name))
+-- 
+1.7.9
+
