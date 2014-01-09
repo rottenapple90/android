@@ -7,6 +7,11 @@
       remote="github"
       revision="cm-11.0"/>
 
+    <project path="device/bn/encore"
+      name="NookieDevs/android_device_bn_encore"
+      remote="github"
+      revision="cm-11.0"/>
+
     <project path="device/htc/leo"
       name="milaq/android_device_htc_leo"
       remote="github"
@@ -37,6 +42,11 @@
       remote="github"
       revision="cm-11.0"/>
 
+    <project path="kernel/bn/encore"
+      name="NookieDevs/android_kernel_bn_encore"
+      remote="github"
+      revision="encore-omap3-3.0.y"/>
+
     <project path="kernel/htc/leo"
       name="milaq/android_kernel_htc_leo"
       remote="github"
@@ -64,6 +74,11 @@
 
     <project path="vendor/asus"
       name="TheMuppets/proprietary_vendor_asus"
+      remote="github"
+      revision="cm-11.0"/>
+
+    <project path="vendor/bn"
+      name="TheMuppets/proprietary_vendor_bn"
       remote="github"
       revision="cm-11.0"/>
 
