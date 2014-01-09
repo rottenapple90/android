@@ -1,0 +1,29 @@
+From 7c671cffecd6fb78771cb511745aef854f197603 Mon Sep 17 00:00:00 2001
+From: Micha LaQua <micha.laqua@gmail.com>
+Date: Thu, 9 Jan 2014 18:33:06 +0100
+Subject: [PATCH] flo: reenable battery led
+
+---
+ .../frameworks/base/core/res/res/values/config.xml |    6 ++++++
+ 1 files changed, 6 insertions(+), 0 deletions(-)
+
+diff --git a/overlay/frameworks/base/core/res/res/values/config.xml b/overlay/frameworks/base/core/res/res/values/config.xml
+index fbe1840..ce3ac24 100644
+--- a/overlay/frameworks/base/core/res/res/values/config.xml
++++ b/overlay/frameworks/base/core/res/res/values/config.xml
+@@ -31,6 +31,12 @@
+     <!-- Default LED off time for notification LED in milliseconds. -->
+     <integer name="config_defaultNotificationLedOff">9000</integer>
+ 
++    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
++    <bool name="config_intrusiveBatteryLed">true</bool>
++
++    <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
++    <bool name="config_multiColorBatteryLed">true</bool>
++
+     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+          autodetected from the Configuration. -->
+     <bool name="config_showNavigationBar">true</bool>
+-- 
+1.7.9
+
