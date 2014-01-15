@@ -34,12 +34,3 @@ function check_clean {
 # insert cherry-picks below
 #
 
-# flo: fix up usb otg for kk
-PATCH=14-01-06_flo-fix-up-usb-otg-for-kk
-FOLDER=device/asus/flo
-###
-pushd ${FOLDER}
-wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
-git am ${PATCH}.patch
-check_clean
-
