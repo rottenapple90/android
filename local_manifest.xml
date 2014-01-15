@@ -15,7 +15,7 @@
     <project path="device/htc/leo"
       name="milaq/android_device_htc_leo"
       remote="github"
-      revision="cm-11.0"/>
+      revision="cm-11.0_3.0"/>
 
     <project path="device/hp/tenderloin"
       name="milaq/android_device_hp_tenderloin"
@@ -50,7 +50,7 @@
     <project path="kernel/htc/leo"
       name="milaq/android_kernel_htc_leo"
       remote="github"
-      revision="cm-11.0"/>
+      revision="cm-11.0_3.0"/>
 
     <project path="kernel/hp/tenderloin"
       name="milaq/android_kernel_hp_tenderloin"
@@ -85,7 +85,7 @@
     <project path="vendor/htc/leo"
       name="milaq/android_vendor_htc_leo"
       remote="github"
-      revision="cm-11.0"/>
+      revision="cm-11.0_3.0"/>
 
     <project path="vendor/hp/tenderloin"
       name="milaq/android_vendor_hp_tenderloin"

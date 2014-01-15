@@ -53,19 +53,19 @@ git am ${PATCH}.patch
 check_clean
 
 # wpa_supplicant: Don't enable NL80211 unconditionally
-FOLDER=external/wpa_supplicant_8
-PATCH=13-12-21_wpa_supplicant-Don-t-enable-NL80211-unconditionally
+#FOLDER=external/wpa_supplicant_8
+#PATCH=13-12-21_wpa_supplicant-Don-t-enable-NL80211-unconditionally
 ###
-pushd ${FOLDER}
-wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
-git am ${PATCH}.patch
-check_clean
+#pushd ${FOLDER}
+#wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
+#git am ${PATCH}.patch
+#check_clean
 
 # wext: use combo scan to avoid SIOCSIWSCAN error
-FOLDER=external/wpa_supplicant_8
-PATCH=13-12-21_wext-use-combo-scan-to-avoid-SIOCSIWSCAN-error
+#FOLDER=external/wpa_supplicant_8
+#PATCH=13-12-21_wext-use-combo-scan-to-avoid-SIOCSIWSCAN-error
 ###
-pushd ${FOLDER}
-wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
-git am ${PATCH}.patch
-check_clean
+#pushd ${FOLDER}
+#wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
+#git am ${PATCH}.patch
+#check_clean
