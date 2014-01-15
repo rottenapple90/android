@@ -50,6 +50,6 @@ git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs
 check_clean
 
 # DisplayDevice: Backwards compatibility with old EGL
-pushd frameworks/base
+pushd frameworks/native
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_native refs/changes/57/54257/5 && git cherry-pick FETCH_HEAD
 check_clean
