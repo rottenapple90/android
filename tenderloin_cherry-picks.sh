@@ -60,3 +60,12 @@ pushd ${FOLDER}
 wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
 git am ${PATCH}.patch
 check_clean
+
+# mm-video-legacy: vdec: display: Change in screenRefresh interface
+PATCH=14-01-16_mm-video-legacy-vdec-display-Change-in-screenRefresh
+FOLDER=hardware/qcom/media
+###
+pushd ${FOLDER}
+wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
+git am ${PATCH}.patch
+check_clean
