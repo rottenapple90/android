@@ -124,12 +124,6 @@
       remote="github"
       revision="master"/>
 
-    <remove-project name="CyanogenMod/android_hardware_ti_wlan"/>
-    <project path="hardware/ti/wlan"
-      name="milaq/android_hardware_ti_wlan"
-      remote="github"
-      revision="cm-11.0"/>
-
     <project path="hardware/broadcom/wlan-legacy"
       name="milaq/android_hardware_broadcom_wlan-legacy"
       remote="github"
