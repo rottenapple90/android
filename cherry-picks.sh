@@ -34,16 +34,6 @@ function check_clean {
 # insert cherry-picks below
 #
 
-# Keyguard: don't refresh ui when screen off
-pushd frameworks/base
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/19/57519/1 && git cherry-pick FETCH_HEAD
-check_clean
-
-# ProcessList: use different polling interval when screen off
-pushd frameworks/base
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/18/57518/1 && git cherry-pick FETCH_HEAD
-check_clean
-
 # allow forcing HighEndGfx mode
 pushd frameworks/base
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/03/57303/2 && git cherry-pick FETCH_HEAD
