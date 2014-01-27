@@ -8,7 +8,7 @@
       revision="cm-11.0"/>
 
     <project path="device/bn/encore"
-      name="milaq/android_device_bn_encore"
+      name="NookieDevs/android_device_bn_encore"
       remote="github"
       revision="cm-11.0"/>
 
@@ -43,9 +43,9 @@
       revision="cm-11.0"/>
 
     <project path="kernel/bn/encore"
-      name="milaq/android_kernel_bn_encore"
+      name="NookieDevs/android_kernel_bn_encore"
       remote="github"
-      revision="cm-11.0"/>
+      revision="encore-omap3-3.0.y"/>
 
     <project path="kernel/htc/leo"
       name="milaq/android_kernel_htc_leo"
