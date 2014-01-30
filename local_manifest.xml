@@ -2,7 +2,7 @@
   <manifest>
 
      <project path="device/htc/kovsky"
-      name="kovskyDevs/android_device_htc_kovsky"
+      name="milaq/android_device_htc_kovsky"
       remote="github"
       revision="gingerbread"/>
 
@@ -22,7 +22,7 @@
       revision="gingerbread" />
 
     <project path="vendor/htc/kovsky"
-      name="kovskyDevs/android_vendor_htc_kovsky"
+      name="milaq/android_vendor_htc_kovsky"
       remote="github"
       revision="gingerbread"/>
 
