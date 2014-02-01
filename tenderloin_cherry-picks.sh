@@ -43,15 +43,6 @@ wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
 git am ${PATCH}.patch
 check_clean
 
-# tinyalsa: properly support multivalued controls
-PATCH=13-11-19_tinyalsa-properly-support-multivalued-controls
-FOLDER=external/tinyalsa
-###
-pushd ${FOLDER}
-wget https://raw.github.com/milaq/android/cm-11.0/patches/${PATCH}.patch
-git am ${PATCH}.patch
-check_clean
-
 # btservice/AdaperState: handle ENABLED_READY in OffState
 PATCH=13-11-25_btservice-AdaperState-handle-ENABLED_READY
 FOLDER=packages/apps/Bluetooth
