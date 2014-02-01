@@ -114,6 +114,11 @@
       remote="github"
       revision="cm-11.0"/>
 
+    <project path="hardware/atheros/wlan"
+      name="CyanogenMod/android_hardware_atheros_wlan"
+      remote="github"
+      revision="cm-11.0"/>
+
     <project path="external/backports-wireless"
       name="milaq/android_external_backports-wireless"
       remote="github"
@@ -138,11 +143,6 @@
       name="Evervolv/android_hardware_qcom_audio-legacy"
       remote="github"
       revision="kitkat"/>
-
-    <project path="hardware/libbt-hci"
-      name="CMTP-CM10-1-BT/libbt-hci"
-      remote="github"
-      revision="cm-10.1"/>
 
     <project path="packages/apps/HwaSettings"
       name="royale1223/HwaSettings"
