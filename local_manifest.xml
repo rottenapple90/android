@@ -149,4 +149,9 @@
       remote="github"
       revision="jellybean"/>
 
+    <project path="vendor/mlq"
+      name="milaq/android_vendor_mlq"
+      remote="github"
+      revision="master"/>
+
   </manifest>
