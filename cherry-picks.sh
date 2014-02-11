@@ -34,11 +34,6 @@ function check_clean {
 # insert cherry-picks below
 #
 
-# allow forcing HighEndGfx mode
-pushd frameworks/base
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/03/57303/2 && git cherry-pick FETCH_HEAD
-check_clean
-
 # DisplayDevice: Backwards compatibility with old EGL
 pushd frameworks/native
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_native refs/changes/57/54257/5 && git cherry-pick FETCH_HEAD
