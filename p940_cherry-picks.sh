@@ -32,12 +32,12 @@ function check_clean {
 
 # kbuild: enable custom gnueabi toolchain e.g. code sourcery
 pushd build
-wget https://raw.github.com/milaq/android/cm-10.2/patches/13-11-20_kbuild-enable-custom-gnueabi-toolchain.patch
+wget https://raw.github.com/rottenapple90/android/cm-11/patches/13-11-20_kbuild-enable-custom-gnueabi-toolchain.patch
 git am 13-11-20_kbuild-enable-custom-gnueabi-toolchain.patch
 check_clean
 
 # telephony: Support broken RIL implementations without CALL_RING events
 pushd frameworks/opt/telephony
-wget https://raw.github.com/milaq/android/cm-10.2/patches/13-11-20_telephony-Support-broken-RIL-implementations.patch
+wget https://raw.github.com/rottenapple90/android/cm-11/patches/13-11-20_telephony-Support-broken-RIL-implementations.patch
 git am 13-11-20_telephony-Support-broken-RIL-implementations.patch
 check_clean
