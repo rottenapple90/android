@@ -1,0 +1,28 @@
+From afe1a558b638b3b2353eb4357580a4fcf3c878bd Mon Sep 17 00:00:00 2001
+From: Micha LaQua <micha.laqua@gmail.com>
+Date: Wed, 20 Nov 2013 16:35:49 +0100
+Subject: [PATCH] kbuild: enable custom gnueabi toolchain e.g. code sourcery
+
+---
+ core/tasks/kernel.mk |    6 +++++-
+ 1 files changed, 5 insertions(+), 1 deletions(-)
+
+diff --git a/core/tasks/kernel.mk b/core/tasks/kernel.mk
+index 4a5878d..d07236e 100644
+--- a/core/tasks/kernel.mk
++++ b/core/tasks/kernel.mk
+@@ -178,7 +178,11 @@ ifeq ($(TARGET_ARCH),arm)
+             ARM_CROSS_COMPILE:=CROSS_COMPILE="$(ccache) $(ANDROID_BUILD_TOP)/prebuilt/linux-x86/toolchain/$(TARGET_KERNEL_CUSTOM_TOOLCHAIN)/bin/arm-eabi-"
+         endif
+     else
+-        ARM_CROSS_COMPILE:=CROSS_COMPILE="$(ccache) $(ARM_EABI_TOOLCHAIN)/arm-eabi-"
++        ifneq ($(TARGET_KERNEL_CUSTOM_TOOLCHAIN_GNUEABI),)
++            ARM_CROSS_COMPILE:=CROSS_COMPILE="$(ccache) $(ANDROID_BUILD_TOP)/prebuilt/linux-x86/toolchain/$(TARGET_KERNEL_CUSTOM_TOOLCHAIN_GNUEABI)/bin/arm-none-linux-gnueabi-"
++        else
++            ARM_CROSS_COMPILE:=CROSS_COMPILE="$(ccache) $(ARM_EABI_TOOLCHAIN)/arm-eabi-"
++        endif
+     endif
+     ccache = 
+ endif
+-- 
+1.7.9
