@@ -1,0 +1,30 @@
+From 7ec32506f46c588d851d1a9daf1acc9519f2330e Mon Sep 17 00:00:00 2001
+From: Ricardo Cerqueira <cyanogenmod@cerqueira.org>
+Date: Wed, 20 Nov 2013 16:37:02 +0100
+Subject: [PATCH] telephony: Support broken RIL implementations without
+ CALL_RING events
+
+---
+ .../com/android/internal/telephony/PhoneBase.java  |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
+diff --git a/src/java/com/android/internal/telephony/PhoneBase.java b/src/java/com/android/internal/telephony/PhoneBase.java
+index 8837317..8257c95 100644
+--- a/src/java/com/android/internal/telephony/PhoneBase.java
++++ b/src/java/com/android/internal/telephony/PhoneBase.java
+@@ -1309,6 +1309,11 @@ public abstract class PhoneBase extends Handler implements Phone {
+         if (!mIsVoiceCapable)
+             return;
+         AsyncResult ar = new AsyncResult(null, cn, null);
++        if (SystemProperties.getBoolean(
++                "ro.telephony.call_ring.absent", true)) {
++            sendMessageDelayed(
++                    obtainMessage(EVENT_CALL_RING_CONTINUE, mCallRingContinueToken, 0), mCallRingDelay);
++        }
+         mNewRingingConnectionRegistrants.notifyRegistrants(ar);
+     }
+ 
+-- 
+1.7.9
+
+
