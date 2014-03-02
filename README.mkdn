@@ -1,6 +1,6 @@
 Cyanogenmod 11
 ================================
-manifests + cherry-picks (milaq)
+manifests + cherry-picks (Thanks for milaq)
 ================================
 
 Android 4.4 KitKat
